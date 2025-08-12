@@ -1,0 +1,36 @@
+<header>
+  <div class="top-bar">
+  <div class="container">
+    <span>
+      <img href="https://github.com/YesidSanabria" src="assets/images/instagram.png" alt="Instagram" class="icon">
+      <img src="assets/images/phone.png" alt="Teléfono" class="icon">
+      +57 311 2099447
+    </span>
+
+    <span>
+      <img src="assets/images/email.png" alt="Email" class="icon">
+      indumarmol@gmail.com
+    </span>
+  </div>
+</div>
+  <nav class="main-nav container">
+    <a href="#inicio" class="logo">
+      <img src="assets/images/logo.png" alt="Logo Indumármol">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li class="dropdown">
+        <a (click)="toggleDropdown()" class="dropdown-toggle">
+          Productos <span class="arrow">▼</span>
+        </a>
+        <ul class="dropdown-menu" *ngIf="isDropdownOpen">
+          <li *ngFor="let product of products">
+            <a [href]="product.link">{{ product.name }}</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contáctanos</a></li>
+    </ul>
+  </nav>
+</header>

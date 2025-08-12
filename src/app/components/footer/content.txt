@@ -1,0 +1,8 @@
+Footer Component (app-footer)
+Este es el pie de página, la sección final que cierra el sitio web.
+
+El logo.
+
+Enlaces secundarios (como "Quiénes Somos", "Política de Garantía").
+
+La información de contacto y los íconos de redes sociales.

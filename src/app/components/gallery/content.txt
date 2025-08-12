@@ -1,0 +1,2 @@
+Gallery Component (app-gallery) 🖼️
+Este componente mostrará la galería de proyectos. 
