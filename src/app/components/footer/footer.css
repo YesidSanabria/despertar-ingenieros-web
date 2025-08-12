@@ -1,43 +1,67 @@
 .site-footer {
-  background-color: #111;
-  color: #aaa;
-  padding-top: 4rem;
+  background-color: #2e3333; /* Un gris oscuro como el de la imagen */
+  color: #c7c7c7; /* Un gris claro para el texto */
+  padding: 3rem 0 1.5rem 0;
+  font-size: 0.9rem;
 }
-.footer-container {
+
+/* --- Parte Superior --- */
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Para que se ajuste en pantallas pequeñas */
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #4a4a4a; /* Línea divisoria */
+  gap: 2rem;
+}
+
+.footer-logo img {
+  height: 50px;
+  /* Si tu logo original es negro, descomenta la siguiente línea para hacerlo blanco */
+  /* filter: brightness(0) invert(1); */
+}
+
+.footer-logo .tagline {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.8rem;
+}
+
+.footer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-  padding-bottom: 4rem;
+  gap: 2.5rem; /* Espacio entre los links */
 }
-.footer-logo img {
-  height: 40px;
-  filter: brightness(0) invert(1);
-  margin-bottom: 1rem;
-}
-.footer-logo, .footer-links, .footer-contact {
-  flex: 1;
-  min-width: 200px;
-}
-.footer-links h4, .footer-contact h4 {
-  color: var(--color-white);
-  margin-bottom: 1rem;
-}
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-.footer-links ul a {
+
+.footer-nav a {
   text-decoration: none;
-  color: #aaa;
+  color: #ffffff;
+  font-weight: 500;
   transition: color 0.3s;
 }
-.footer-links ul a:hover {
-  color: var(--color-accent);
+
+.footer-nav a:hover {
+  color: var(--color-accent); /* Usa el color de acento dorado que ya definimos */
 }
+
+/* --- Barra Inferior --- */
 .footer-bottom {
-  border-top: 1px solid #333;
-  padding: 1.5rem 0;
   text-align: center;
-  font-size: 0.9rem;
+  padding-top: 1.5rem;
+}
+
+.footer-bottom .separator {
+  margin: 0 1rem;
+}
+
+/* --- Estilos para Móviles --- */
+@media (max-width: 850px) {
+  .footer-main {
+    flex-direction: column; /* Apila el logo y los links */
+    align-items: center;
+    text-align: center;
+  }
 }
