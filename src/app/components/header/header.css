@@ -1,10 +1,11 @@
 /* Estilos Header */
 header {
-  position: absolute;
+  position: static;
   width: 100%;
-  z-index: 10;
   top: 0;
   left: 0;
+  z-index: 100;
+
 }
 .top-bar {
   background-color: var(--color-dropdown-bg);
@@ -21,14 +22,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
 .logo img {
   height: 40px;
 }
 .nav-links {
   display: flex;
+  color: #1a1a1a;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -37,7 +42,7 @@ header {
 }
 .nav-links a {
   text-decoration: none;
-  color: var(--color-text-light);
+  color: var(--color-text-dark);
   font-weight: 500;
   padding-bottom: 5px;
   transition: color 0.3s;

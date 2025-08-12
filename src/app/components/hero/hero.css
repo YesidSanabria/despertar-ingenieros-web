@@ -1,14 +1,38 @@
 .hero-section {
   height: 100vh;
-  background: url('/assets/images/hero-background.jpg') no-repeat center center/cover;
+  background-image: url('/assets/images/hero-background.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   color: var(--color-text-light);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
+
+.hero-content {
+  /* Este contenedor ya centra el texto, no requiere estilos adicionales por ahora */
+}
+
 .hero-content h1 {
   font-size: 3.5rem;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
   margin-bottom: 2rem;
+}
+
+hero-image{
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.hero2{
+  font-size: 1.2rem;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
