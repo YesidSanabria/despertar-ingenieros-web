@@ -1,5 +1,5 @@
 .gallery-section {
-  padding: 6rem 2rem;
+  padding: 0.5rem 0.5rem;
   text-align: center;
 }
 .gallery-section h2 {
@@ -8,15 +8,16 @@
 }
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
   gap: 1.5rem;
 }
 .gallery-item {
+  background-color: black;
   position: relative;
   overflow: hidden;
   cursor: pointer;
   border-radius: 5px;
-  height: 400px;
+  height: 280px;
 }
 .gallery-item img {
   width: 100%;
@@ -29,12 +30,25 @@
   transform: scale(1.1);
 }
 .item-info {
+  
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 1.5rem;
   color: white;
-  text-align: left;
+  text-align: center;
   background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+}
+
+.item-info a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100; 
+  font-size: 1.8rem;
+  color: white;
+}
+
+.item-info p {
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0;
 }

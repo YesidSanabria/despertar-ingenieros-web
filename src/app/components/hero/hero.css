@@ -17,11 +17,38 @@
 
 .hero-content h1 {
   font-size: 3.5rem;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
   margin-bottom: 2rem;
 }
 
-hero-image{
+.hero-banner {
+  background-size: cover;
+  background-position: center;
+  height: 30vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hero-banner h1, .hero-banner p {
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-banner p {  
+  font-size: 2.8rem;
+  font-weight: 300;
+}
+
+.hero-image{
   width: 100%;
   max-width: 600px;
   height: auto;
@@ -29,8 +56,11 @@ hero-image{
 }
 
 .hero2{
+  background-color: bisque;
+
+
   font-size: 1.2rem;
-  height: 20vh;
+  height: 13vh;
   display: flex;
   justify-content: center;
   align-items: center;
