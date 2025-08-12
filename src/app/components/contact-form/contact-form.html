@@ -1,24 +1,93 @@
 <section id="contacto" class="contact-section">
-  <div class="contact-overlay"></div>
-  <div class="container contact-container">
-    <h2>Contáctanos</h2>
+
+     <h2>Contáctanos</h2>
+  <div class="contact-form-wrapper">
     <form class="contact-form">
-      <div class="form-group-row">
-        <input type="text" placeholder="Nombres">
-        <input type="text" placeholder="Apellidos">
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="nombres">Nombres</label>
+          <input type="text" id="nombres" name="nombres">
+        </div>
+        <div class="form-group">
+          <label for="apellidos">Apellidos</label>
+          <input type="text" id="apellidos" name="apellidos">
+        </div>
+
+        <div class="form-group">
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" name="correo">
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono">
+        </div>
+
+        <div class="form-group">
+          <label for="cliente">Cliente</label>
+          <select id="cliente" name="cliente">
+            <option>Ingeniero</option>
+            <option>Arquitecto</option>
+            <option>Diseñador</option>
+            <option>Particular</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ciudad">Ciudad</label>
+          <select id="ciudad" name="ciudad">
+            <option>Armenia</option>
+            <option>Barranquilla</option>
+            <option>Bogotá</option>
+            <option>Bucaramanga</option>
+            <option>Cali</option>
+            <option>Cartagena</option>
+            <option>Chía</option>
+            <option>Cota</option>
+            <option>Cúcuta</option>
+            <option>Girardot</option>
+            <option>Ibagué</option>
+            <option>Manizales</option>
+            <option>Medellín</option>
+            <option>Montería</option>
+            <option>Neiva</option>
+            <option>Pasto</option>
+            <option>Pereira</option>
+            <option>Popayán</option>
+            <option>Rionegro</option>
+            <option>Santa Marta</option>
+            <option>Sincelejo</option>
+            <option>Tunja</option>
+            <option>Valledupar</option>
+            <option>Villavicencio</option>
+            <option>Yopal</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" name="direccion">
+        </div>
+
+        <div class="form-group full-width">
+          <label for="archivo">Archivo Adjunto</label>
+          <input type="file" id="archivo" name="archivo">
+        </div>
+
+        <div class="form-group full-width">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+        </div>
+
       </div>
-      <div class="form-group-row">
-        <input type="email" placeholder="Correo">
-        <input type="tel" placeholder="Teléfono">
+
+      <div class="form-footer">
+        <div class="form-group-check">
+          <input type="checkbox" id="autorizacion" name="autorizacion">
+          <label for="autorizacion">Autorizo el tratamiento de datos</label>
+        </div>
+        <button type="submit" class="btns">Contáctanos</button>  
       </div>
-      <div class="form-group-full">
-        <textarea placeholder="Mensaje" rows="5"></textarea>
-      </div>
-      <div class="form-group-check">
-        <input type="checkbox" id="autorizacion">
-        <label for="autorizacion">Autorizo el tratamiento de datos</label>
-      </div>
-      <button type="submit" class="btn">Contáctanos</button>
+
     </form>
   </div>
 </section>

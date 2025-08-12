@@ -1,9 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, HostListener, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.html',
-  styleUrls: ['./header.css']
+  styleUrls: ['./header.css'],
+  standalone: true,
+  imports: [CommonModule]
 })
 export class HeaderComponent {
   isDropdownOpen = false;

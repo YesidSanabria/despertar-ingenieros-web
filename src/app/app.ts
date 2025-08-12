@@ -1,17 +1,29 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { Footer } from "./components/footer/footer";
-import { ContactForm } from "./components/contact-form/contact-form";
-import { Gallery } from "./components/gallery/gallery";
-import { Hero } from "./components/hero/hero";
-import { HeaderComponent } from "./components/header/header";
+
+// Importa TODOS tus componentes aquí
+import { HeaderComponent } from './components/header/header';
+import { HeroComponent } from './components/hero/hero';
+import { GalleryComponent } from './components/gallery/gallery';
+import { ContactFormComponent } from './components/contact-form/contact-form';
+import { FooterComponent } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Footer, ContactForm, Gallery, Hero, HeaderComponent],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    HeaderComponent,
+    HeroComponent,
+    GalleryComponent,
+    ContactFormComponent,
+    FooterComponent
+  ],
+  templateUrl: './app.html', // Corregido
+  styleUrl: './app.css'      // Corregido
 })
-export class App {
-  protected readonly title = signal('indumarmol-web');
+export class AppComponent {
+  title = 'indumarmol-web';
 }
