@@ -8,6 +8,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './contact-form.html',
   styleUrls: ['./contact-form.css']
 })
+
+// Archivos permitidos: png, jpeg, pdf, word, excel para el envio a Netlify
 export class ContactFormComponent {
   fileError: string | null = null;
   readonly allowedFileTypes = [
@@ -18,7 +20,7 @@ export class ContactFormComponent {
     'application/vnd.ms-excel',
     'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
   ];
-
+//Validacion del tipo de archivo
   onFileChange(event: any): void {
     const file = event.target.files[0];
     if (!file) {
@@ -32,7 +34,7 @@ export class ContactFormComponent {
       event.target.value = null;
     }
   }
-
+//Envio del formulario
   handleSubmit(event: Event): void {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
