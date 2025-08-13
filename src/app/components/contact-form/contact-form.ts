@@ -11,7 +11,9 @@ import { CommonModule } from '@angular/common';
 export class ContactFormComponent {
   fileError: string | null = null;
   readonly allowedFileTypes = [
-    'image/png', 'image/jpeg', 'application/pdf', 'application/msword',
+    'image/png', 'image/jpeg', 
+    //'application/pdf', 
+    'application/msword',
     'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     'application/vnd.ms-excel',
     'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
@@ -26,7 +28,7 @@ export class ContactFormComponent {
     if (this.allowedFileTypes.includes(file.type)) {
       this.fileError = null;
     } else {
-      this.fileError = 'Archivo no valido. Por favor, selecciona un archivo permitido.';
+      this.fileError = 'Archivo no valido. Por favor, selecciona un archivo permitido. (png, jpeg, Word, Excel)';
       event.target.value = null;
     }
   }

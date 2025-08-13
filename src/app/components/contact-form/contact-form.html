@@ -53,12 +53,14 @@
         </div>
         <div class="form-group full-width">
           <label for="archivo">Archivo Adjunto</label>
+          
           <input 
             type="file" 
             id="archivo" 
             name="archivo" 
             (change)="onFileChange($event)"
-            accept="image/png, image/jpeg, application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+            accept="image/png, image/jpeg, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+            <!---application/pdf,--->
           <p *ngIf="fileError" class="error-text">{{ fileError }}</p>
         </div>
         <div class="form-group full-width">
