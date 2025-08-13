@@ -1,28 +1,35 @@
 <section id="contacto" class="contact-section">
-
-     <h2>Contáctanos</h2>
+  <h2>Contáctanos</h2>
   <div class="contact-form-wrapper">
-    <form class="contact-form">
-      <div class="form-grid">
 
+    <form
+      name="contact"
+      netlify
+      netlify-honeypot="bot-field"
+      (submit)="handleSubmit($event)">
+
+      <input type="hidden" name="form-name" value="contact">
+      <p style="display: none;">
+        <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+      </p>
+
+      <div class="form-grid">
         <div class="form-group">
           <label for="nombres">Nombres</label>
-          <input type="text" id="nombres" name="nombres">
+          <input type="text" id="nombres" name="nombres" required>
         </div>
         <div class="form-group">
           <label for="apellidos">Apellidos</label>
-          <input type="text" id="apellidos" name="apellidos">
+          <input type="text" id="apellidos" name="apellidos" required>
         </div>
-
         <div class="form-group">
           <label for="correo">Correo</label>
-          <input type="email" id="correo" name="correo">
+          <input type="email" id="correo" name="correo" required>
         </div>
         <div class="form-group">
           <label for="telefono">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono">
+          <input type="tel" id="telefono" name="telefono" required>
         </div>
-
         <div class="form-group">
           <label for="cliente">Cliente</label>
           <select id="cliente" name="cliente">
@@ -38,56 +45,37 @@
             <option>Armenia</option>
             <option>Barranquilla</option>
             <option>Bogotá</option>
-            <option>Bucaramanga</option>
-            <option>Cali</option>
-            <option>Cartagena</option>
-            <option>Chía</option>
-            <option>Cota</option>
-            <option>Cúcuta</option>
-            <option>Girardot</option>
-            <option>Ibagué</option>
-            <option>Manizales</option>
-            <option>Medellín</option>
-            <option>Montería</option>
-            <option>Neiva</option>
-            <option>Pasto</option>
-            <option>Pereira</option>
-            <option>Popayán</option>
-            <option>Rionegro</option>
-            <option>Santa Marta</option>
-            <option>Sincelejo</option>
-            <option>Tunja</option>
-            <option>Valledupar</option>
-            <option>Villavicencio</option>
-            <option>Yopal</option>
-          </select>
+            </select>
         </div>
-
         <div class="form-group full-width">
           <label for="direccion">Dirección</label>
           <input type="text" id="direccion" name="direccion">
         </div>
-
         <div class="form-group full-width">
           <label for="archivo">Archivo Adjunto</label>
-          <input type="file" id="archivo" name="archivo">
+          
+          <input 
+            type="file" 
+            id="archivo" 
+            name="archivo" 
+            (change)="onFileChange($event)"
+            accept="image/png, image/jpeg, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+            <!---application/pdf,--->
+          <p *ngIf="fileError" class="error-text">{{ fileError }}</p>
         </div>
-
         <div class="form-group full-width">
           <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
         </div>
-
       </div>
 
       <div class="form-footer">
         <div class="form-group-check">
-          <input type="checkbox" id="autorizacion" name="autorizacion">
+          <input type="checkbox" id="autorizacion" name="autorizacion" required>
           <label for="autorizacion">Autorizo el tratamiento de datos</label>
         </div>
-        <button type="submit" class="btns">Contáctanos</button>  
+        <button type="submit" class="btn">Contáctanos</button>
       </div>
-
     </form>
   </div>
 </section>
