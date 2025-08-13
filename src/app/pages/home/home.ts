@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-// Importa los componentes que usa esta página
 import { HeroComponent } from '../../components/hero/hero';
 import { GalleryComponent } from '../../components/gallery/gallery';
 import { ContactFormComponent } from '../../components/contact-form/contact-form';

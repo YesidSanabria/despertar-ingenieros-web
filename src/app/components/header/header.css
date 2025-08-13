@@ -1,4 +1,3 @@
-/* Estilos Header */
 header {
   position: static;
   width: 100%;
@@ -91,11 +90,11 @@ header {
 .top-bar span {
   display: flex;
   align-items: center;
-  gap: 8px; /* Crea un espacio entre el ícono y el texto */
+  gap: 8px;
 }
 
 /* Estilos para los íconos */
 .icon {
-  height: 16px; /* Ajusta la altura del ícono como necesites */
+  height: 16px;
   width: auto;
 }

@@ -1,9 +1,6 @@
-/* src/app/components/contact-form/contact-form.component.css */
-
 .contact-section {
   padding: 2rem 2rem;
-  /*background-color: bisque;*/
-  background-image: url('/assets/images/hero-background.png');
+  background-image: url('/assets/images/form-background.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

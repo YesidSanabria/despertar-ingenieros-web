@@ -11,7 +11,7 @@ import { Component, HostListener, ElementRef } from '@angular/core';
 export class HeaderComponent {
   isDropdownOpen = false;
 
-  // Productos que irán en el menú
+  // Productos que hay en el menú
   products = [
     { name: 'Granito', link: '#productos' },
     { name: 'Quarzita', link: '#productos' },
