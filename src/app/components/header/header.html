@@ -17,9 +17,9 @@
 </div>
   <nav class="main-nav container">
     <a href="#" class="logo">
-      <img src="assets/images/logo.png" alt="Logo Indumármol">
+      <img src="/assets/images/123.jpg" alt="Logo Indumármol">
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links">*
       <li><a href="#">Inicio</a></li>
       <li class="dropdown">
         <a (click)="toggleDropdown()" class="dropdown-toggle">
@@ -27,7 +27,7 @@
         </a>
         <ul class="dropdown-menu" *ngIf="isDropdownOpen">
           <li *ngFor="let product of products">
-            <a [href]="product.link">{{ product.name }}</a>
+            <a [routerLink]="['/productos', product.id]">{{ product.name }}</a>
           </li>
         </ul>
       </li>

@@ -1,28 +1,30 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, ElementRef } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.html',
   styleUrls: ['./header.css'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule, RouterModule]
 })
 export class HeaderComponent {
   isDropdownOpen = false;
 
   // Productos que hay en el menú
   products = [
-    { name: 'Granito', link: '#productos' },
-    { name: 'Quarzita', link: '#productos' },
-    { name: 'Mármol', link: '#productos' },
-    { name: 'Piedra Bali', link: '#productos' },
-    { name: 'Lava Stone', link: '#productos' },
-    { name: 'Areniscas', link: '#productos' },
-    { name: 'Travertino', link: '#productos' },
-    { name: 'Calizas', link: '#productos' },
-    { name: 'Ónix', link: '#productos' },
-    { name: 'Mosaicos', link: '#productos' }
+    { id: 'marmol', name: 'Mármol' },
+    { id: 'granito', name: 'Granito' },
+    { id: 'quarzita', name: 'Quarzita' },
+    { id: 'piedrabali', name: 'Piedra Bali' },
+    { id: 'lavastone', name: 'Lava Stone' },
+    { id: 'areniscas', name: 'Areniscas' },
+    { id: 'travertino', name: 'Travertino' },
+    { id: 'calizas', name: 'Calizas' },
+    { id: 'onix', name: 'Ónix' },
+    { id: 'mosaicos', name: 'Mosaicos' },
+
   ];
 
   constructor(private eRef: ElementRef) {}
@@ -31,7 +33,6 @@ export class HeaderComponent {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
 
-  // Cierra el menú si se hace clic fuera de él
   @HostListener('document:click', ['$event'])
   clickout(event: Event) {
     if(!this.eRef.nativeElement.contains(event.target)) {

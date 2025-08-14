@@ -1,0 +1,32 @@
+[
+  {
+    "id": "marmol",
+    "name": "Mármol",
+    "heroImage": "assets/images/hero-marmol.jpg",
+    "description": "Descubre la esencia del mármol: belleza, resistencia y distinción. Cada pieza cuenta una historia formada durante millones de años, combinando una resistencia excepcional con acabados que realzan su carácter único.",
+    "applications": [
+      "Lobby",
+      "Fachadas",
+      "Pisos y paredes residenciales",
+      "Baños",
+      "Mesones de baño",
+      "Chimeneas"
+    ],
+    "stoneTypes": [
+      {
+        "category": "Crema",
+        "items": [
+          { "name": "Botticino Italiano", "image": "assets/images/products/marmol/crema-botticino-italiano.jpg" },
+          { "name": "Crema Marfil Basic", "image": "assets/images/products/marmol/crema-marfil-basic.jpg" }
+        ]
+      },
+      {
+        "category": "Café",
+        "items": [
+          { "name": "Armani Brown", "image": "assets/images/products/marmol/cafe-armani-brown.jpg" },
+          { "name": "Emperador Light", "image": "assets/images/products/marmol/cafe-emperador-light.jpg" }
+        ]
+      }
+    ]
+  }
+]

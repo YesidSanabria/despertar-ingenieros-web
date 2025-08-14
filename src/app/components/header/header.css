@@ -1,5 +1,5 @@
 header {
-  position: static;
+  position: relative;
   width: 100%;
   top: 0;
   left: 0;
@@ -27,8 +27,9 @@ header {
   padding-bottom: 1rem;
 }
 
-.logo img {
+.logo {
   height: 40px;
+  display: flex;
 }
 .nav-links {
   display: flex;
@@ -40,6 +41,7 @@ header {
   align-items: center;
 }
 .nav-links a {
+  font-family: 'CasperR';
   text-decoration: none;
   color: var(--color-grebt);
   font-weight: 500;

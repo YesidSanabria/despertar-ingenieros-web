@@ -41,13 +41,14 @@
 }
 
 .item-info a {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Bitter';
   font-weight: 100; 
   font-size: 1.8rem;
   color: white;
 }
 
 .item-info p {
+  font-family: 'Bitter-Regular';
   color: white;
   margin-top: 0px;
   margin-bottom: 0;

@@ -1,0 +1,47 @@
+
+    <div *ngIf="product" class="product-page-wrapper">
+
+      <section class="product-hero" [ngStyle]="{'background-image': 'url(' + product.heroImage + ')'}">
+        <div class="hero-overlay"></div>
+        <h1 class="product-title">{{ product.name }}</h1>
+      </section>
+      <section class="product-page">
+      <div class="container description-section">
+        <p [innerHTML]="descripcionFormateada"></p>
+      </div>
+
+      <div class="container applications-section" *ngIf="product.applications && product.applications.length > 0">
+        <h2>Aplicaciones</h2>
+        <ul>
+          <li *ngFor="let app of product.applications">{{ app }}</li>
+        </ul>
+      </div>
+
+      <div class="container stone-gallery-section" *ngIf="product.stoneTypes && product.stoneTypes.length > 0">
+        <h2>Conoce nuestras piedras</h2>
+        <div *ngFor="let stoneType of product.stoneTypes" class="stone-category">
+          <h3>{{ stoneType.category }}</h3>
+          <div class="stone-grid">
+            <div *ngFor="let item of stoneType.items" class="stone-item">
+              <img [src]="item.image" [alt]="item.name">
+              <p>{{ item.name }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+    </div>
+
+
+<div style="padding: 5rem 2rem;">
+
+  <div *ngIf="errorCarga" class="error-container">
+    <h2>Error</h2>
+    <p>{{ errorCarga }}</p>
+  </div>
+
+  <div *ngIf="!product && !errorCarga">
+    <p style="text-align: center; font-size: 2rem;">Cargando...</p>
+  </div>
+
+</div>
