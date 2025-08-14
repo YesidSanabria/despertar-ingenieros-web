@@ -3,7 +3,7 @@
     "id": "marmol",
     "name": "Mármol",
     "heroImage": "assets/images/hero-marmol.jpg",
-    "description": "Descubre la esencia del mármol: belleza, resistencia y distinción. Cada pieza cuenta una historia formada durante millones de años, combinando una resistencia excepcional con acabados que realzan su carácter único.",
+    "description": "En Indumármol, cada pieza cuenta una historia formada durante millones de años. Nuestro mármol, fruto de la transform ación natural de las rocas calizas, combina una resistencia excepcional con acabados que realzan su carácter único: desde el brillo impecable hasta texturas más sutiles y atemporales. Con una gama de colores y vetas irrepetibles, llevamos a tus espacios la perfecta fusión entre lujo, autenticidad y estilo, creando ambientes que trascienden el tiempo",
     "applications": [
       "Lobby",
       "Fachadas",
@@ -16,14 +16,16 @@
       {
         "category": "Crema",
         "items": [
-          { "name": "Botticino Italiano", "image": "assets/images/products/marmol/crema-botticino-italiano.jpg" },
-          { "name": "Crema Marfil Basic", "image": "assets/images/products/marmol/crema-marfil-basic.jpg" }
+          { "name": "Botticino Italiano", "image": "assets/images/products/marmol/cremaitaliano.jpg" },
+          { "name": "Crema Marfil Basic", "image": "assets/images/products/marmol/cremamarfil.jpg" },
+          { "name": "Armani Brown", "image": "assets/images/products/marmol/cafearmani.jpg" }
+          
         ]
       },
       {
         "category": "Café",
         "items": [
-          { "name": "Armani Brown", "image": "assets/images/products/marmol/cafe-armani-brown.jpg" },
+          { "name": "Armani Brown", "image": "assets/images/products/marmol/cafearmani.jpg" },
           { "name": "Emperador Light", "image": "assets/images/products/marmol/cafe-emperador-light.jpg" }
         ]
       }
