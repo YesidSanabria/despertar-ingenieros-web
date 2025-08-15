@@ -1,0 +1,35 @@
+[
+  {
+    "id": "casa-villa-espana",
+    "name": "Casa Villa España",
+    "galleryThumbnail": "assets/images/projects/casa-villa-espana.jpg",
+    "heroImage": "assets/images/projects/detail/villa-espana-hero.jpg",
+    "location": "Bogotá, Colombia",
+    "description": {
+      "applications": "Cocina Mesón, Salpicadero e Isla Gramarston Ducal Gold by Ascale acabado Brillado",
+      "materials": "Baño Mesón Quarztone"
+    },
+    "galleryImages": [
+      "/assets/images/form-background.jpg",
+      "/assets/images/form-background.jpg",
+      "/assets/images/form-background.jpg",
+      "/assets/images/form-background.jpg",
+      "/assets/images/form-background.jpg",
+      "/assets/images/form-background.jpg"
+    ],
+    "featuredMaterialLink": "/productos/marmol"
+  },
+  {
+    "id": "casa-ruitoque-lm7",
+    "name": "Casa Ruitoque LM7",
+    "galleryThumbnail": "assets/images/projects/casa-ruitoque.jpg",
+    "heroImage": "assets/images/projects/detail/ruitoque-hero.jpg",
+    "location": "Bucaramanga, Colombia",
+    "description": {
+      "applications": "Pisos y zonas húmedas",
+      "materials": "Piedra Bali y Mármol Crema"
+    },
+    "galleryImages": [],
+    "featuredMaterialLink": "/productos/piedrabali"
+  }
+]

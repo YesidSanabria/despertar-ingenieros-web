@@ -1,4 +1,6 @@
-/* src/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');   
 
 @font-face {
   font-family: 'CasperB'; /* Le damos un nombre simple */
@@ -27,12 +29,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');   
-
 
 :root {
   --color-primary: #1a1a1a;

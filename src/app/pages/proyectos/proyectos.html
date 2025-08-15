@@ -1,0 +1,29 @@
+<section class="projects-hero">
+  <div class="container">
+    <h1>Proyectos</h1>
+    <p>
+       Aquí descubrirás proyectos donde nuestras piedras naturales han dado vida a espacios únicos,
+     convirtiéndose en el centro de atención por su elegancia y carácter. Cada ambiente re eja la calidad,
+     autenticidad y distinción que Indumármol aporta, inspirando nuevas formas de transformar tus espacios.
+    </p>
+  </div>
+</section>
+
+<section class="projects-gallery container">
+  <div class="intro-text">
+    <p>
+      Desde 2019 trabajamos con dedicación para ofrecerte piedras naturales de la más alta calidad, que no
+        solo embellecen tus espacios, sino que se convierten en parte esencial de tu hogar, acompañándote
+        con su elegancia y durabilidad a lo largo del tiempo
+    </p>
+  </div>
+
+  <div class="projects-grid">
+    <a *ngFor="let project of projects" [routerLink]="['/proyectos', project.id]" class="project-item">
+      <img [src]="project.galleryThumbnail" [alt]="project.name">
+      <div class="item-overlay">
+        <h3>{{ project.name }}</h3>
+      </div>
+    </a>
+  </div>
+</section>

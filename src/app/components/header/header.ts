@@ -24,7 +24,6 @@ export class HeaderComponent {
     { id: 'calizas', name: 'Calizas' },
     { id: 'onix', name: 'Ónix' },
     { id: 'mosaicos', name: 'Mosaicos' },
-
   ];
 
   constructor(private eRef: ElementRef) {}
@@ -37,6 +36,17 @@ export class HeaderComponent {
   clickout(event: Event) {
     if(!this.eRef.nativeElement.contains(event.target)) {
       this.isDropdownOpen = false;
+    }
+  }
+
+
+  scrollToContact(event: MouseEvent): void {
+    event.preventDefault();
+    
+    const contactSection = document.getElementById('contacto');
+    
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 }

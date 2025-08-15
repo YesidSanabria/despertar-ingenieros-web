@@ -1,0 +1,39 @@
+<div *ngIf="project; else loading" class="project-detail-page">
+
+  <section class="project-hero" [ngStyle]="{'background-image': 'url(' + project.heroImage + ')'}">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <h1 class="project-title">{{ project.name }}</h1>
+    </div>
+  </section>
+
+  <section class="project-info container">
+    <dl>
+      <dt>Ubicación:</dt>
+      <dd>{{ project.location }}</dd>
+      <dt>Aplicaciones y Materiales:</dt>
+      <dd>{{ project.description.applications }}</dd>
+      <dd>{{ project.description.materials }}</dd>
+    </dl>
+  </section>
+
+  <section class="project-collage container" *ngIf="project.galleryImages && project.galleryImages.length > 0">
+    <div class="collage-grid">
+      <div *ngFor="let image of project.galleryImages; let isLast = last" class="collage-item">
+        <img [src]="image" [alt]="project.name">
+        
+        <a *ngIf="isLast" [routerLink]="project.featuredMaterialLink" class="material-link">
+          <div class="material-link-overlay"></div>
+          <span>Ver material</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<ng-template #loading>
+  <div class="loading-screen">
+    <p>Cargando proyecto...</p>
+  </div>
+</ng-template>

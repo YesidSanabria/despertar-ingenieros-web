@@ -17,13 +17,19 @@
   </div>
 </div>
   <nav class="main-nav container">
-    <a href="#" class="logo">
+    <a href="/" class="logo">
       <img class="img" src="/assets/images/logotipo.png" alt="Logo Indumármol">
     </a>
     <ul class="nav-links">
-      <li><a href="#">Inicio</a></li>
+      <li>
+        <a routerLink="/" 
+          routerLinkActive="active-link" 
+          [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+      </li>
+
+      <!---Pendiente animacion del color del texto Producto-->
       <li class="dropdown">
-        <a (click)="toggleDropdown()" class="dropdown-toggle">
+        <a routerLinkActive="active-link" (click)="toggleDropdown()" class="dropdown-toggle">
           Productos <span class="arrow">▼</span>
         </a>
         <ul class="dropdown-menu" *ngIf="isDropdownOpen">
@@ -32,8 +38,10 @@
           </li>
         </ul>
       </li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#contacto">Contáctanos</a></li>
+        <li>
+          <a routerLink="/proyectos" routerLinkActive="active-link">Proyectos</a>
+        </li>
+      <li><a href="#contacto" (click)="scrollToContact($event)">Contáctanos</a></li>
     </ul>
   </nav>
 </header>
