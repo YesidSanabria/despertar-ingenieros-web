@@ -19,7 +19,7 @@ export class HeaderComponent {
     { id: 'granito', name: 'Granito' },
     { id: 'lavastone', name: 'Lava Stone' },
     { id: 'marmol', name: 'Mármol' },
-    { id: 'mosaicos', name: 'Mosaicos' },
+    //{ id: 'mosaicos', name: 'Mosaicos' },
     { id: 'onix', name: 'Ónix' },
     { id: 'piedrabali', name: 'Piedra Bali' },
     { id: 'quarzita', name: 'Quarzita' },
