@@ -17,6 +17,10 @@
         </ul>
       </div>
 
+      <div class="container description-section">
+        <b><p [innerHTML]="nota"></p></b>
+      </div>
+
       <div class="container stone-gallery-section" *ngIf="product.stoneTypes && product.stoneTypes.length > 0">
         <h2>Conoce nuestras piedras</h2>
         <div *ngFor="let stoneType of product.stoneTypes" class="stone-category">

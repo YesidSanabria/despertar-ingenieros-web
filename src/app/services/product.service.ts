@@ -9,6 +9,7 @@ export interface Product {
   description: string;
   applications: string[];
   stoneTypes: any[];
+  nota: string;
 }
 
 export interface Project {
@@ -17,6 +18,7 @@ export interface Project {
   galleryThumbnail: string;
   heroImage: string;
   location: string;
+  nota: string;
   description: {
     applications: string;
     materials: string;

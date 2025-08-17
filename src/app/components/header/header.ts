@@ -14,16 +14,17 @@ export class HeaderComponent {
 
   // Productos que hay en el menú
   products = [
-    { id: 'marmol', name: 'Mármol' },
-    { id: 'granito', name: 'Granito' },
-    { id: 'quarzita', name: 'Quarzita' },
-    { id: 'piedrabali', name: 'Piedra Bali' },
-    { id: 'lavastone', name: 'Lava Stone' },
     { id: 'areniscas', name: 'Areniscas' },
-    { id: 'travertino', name: 'Travertino' },
     { id: 'calizas', name: 'Calizas' },
-    { id: 'onix', name: 'Ónix' },
+    { id: 'granito', name: 'Granito' },
+    { id: 'lavastone', name: 'Lava Stone' },
+    { id: 'marmol', name: 'Mármol' },
     { id: 'mosaicos', name: 'Mosaicos' },
+    { id: 'onix', name: 'Ónix' },
+    { id: 'piedrabali', name: 'Piedra Bali' },
+    { id: 'quarzita', name: 'Quarzita' },
+    { id: 'quarzstonesilestone', name: 'Quarzstone y Silestone' },
+    { id: 'travertino', name: 'Travertino' }
   ];
 
   constructor(private eRef: ElementRef) {}

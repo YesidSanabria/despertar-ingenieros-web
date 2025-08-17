@@ -14,6 +14,7 @@ export class ProductPageComponent implements OnInit {
   product: Product | undefined;
   errorCarga: string | null = null; // Para mensajes de error
   descripcionFormateada = '';     // Para la descripción con <br>
+  nota = ''; 
 
   constructor(
     private route: ActivatedRoute,
@@ -33,9 +34,11 @@ export class ProductPageComponent implements OnInit {
               // Caso: el producto con ese ID no se encontró en el JSON
               this.errorCarga = 'El producto solicitado no fue encontrado.';
               this.descripcionFormateada = '';
+              this.nota = '';
             } else {
               // Formateamos la descripción para respetar los saltos de línea
               this.descripcionFormateada = this.product.description.replace(/\n/g, '<br>');
+              this.nota = this.product.nota.replace(/\n/g, '<br>');
               this.errorCarga = null; // Limpiamos errores previos
             }
           },
