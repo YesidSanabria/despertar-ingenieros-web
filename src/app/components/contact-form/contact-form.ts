@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./contact-form.css']
 })
 
-export class ProveedoresComponent {
+export class ContactFormComponent {
   fileError: string | null = null;
   // Lista de archivos permitidos (incluyendo PDF para el catálogo)
   readonly allowedFileTypes = [
