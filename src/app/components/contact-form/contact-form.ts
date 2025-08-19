@@ -14,7 +14,7 @@ export class ContactFormComponent {
   fileError: string | null = null;
   readonly allowedFileTypes = [
     'image/png', 'image/jpeg', 
-    //'application/pdf', 
+    'application/pdf', 
     'application/msword',
     'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     'application/vnd.ms-excel',
