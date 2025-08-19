@@ -101,7 +101,17 @@ textarea {
 }
 
 
+/* --- Estilos para pantallas pequeñas (móviles) --- */
 @media (max-width: 768px) {
+  .proveedores-section {
+    padding: 2rem 1rem;
+  }
+
+  .form-container {
+    width: 95%; /* Ocupa más ancho en pantallas pequeñas */
+    padding: 1.5rem;
+  }
+
   .form-grid {
     grid-template-columns: 1fr;
   }

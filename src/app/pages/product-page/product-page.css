@@ -142,14 +142,8 @@
     max-width: 900px;
     margin: 0
   }
-/* Media Query para móviles */
-@media (max-width: 768px) {
-  .product-title {
-    font-size: 3rem;
-  }
-}
 
-.error-container {
+  .error-container {
     text-align: center;
     padding: 2rem;
     margin: 2rem auto;
@@ -158,4 +152,30 @@
     color: #c51212;
     border-radius: 8px;
     max-width: 800px;
+}
+
+/* --- Estilos para pantallas pequeñas (móviles) --- */
+@media (max-width: 768px) {
+  .product-hero {
+    height: 50vh; /* Menos altura en móvil */
+    padding: 2rem;
+    justify-content: center; /* Centra el título en móvil */
+    text-align: center;
+  }
+
+  .product-title {
+    font-size: 3rem; /* Título más pequeño */
+  }
+
+  .description-section, .applications-section, .stone-gallery-section {
+    padding: 2rem 1rem; /* Menos padding */
+  }
+
+  .applications-section ul {
+    columns: 1; /* Una sola columna para la lista */
+  }
+
+  .applications-section h2, .stone-gallery-section h2, .stone-category h3 {
+    text-align: center; /* Centra los títulos de sección */
+  }
 }

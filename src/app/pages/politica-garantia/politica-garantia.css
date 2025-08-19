@@ -51,3 +51,21 @@
 .about-intro p {
   margin-bottom: 1rem;
 }
+
+/* --- Estilos para pantallas pequeñas (móviles) --- */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 40vh; /* Reduce la altura del hero */
+    padding: 2rem;
+    align-items: center; /* Centra el título vertical y horizontalmente */
+    text-align: center;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-content {
+    padding: 2rem 1rem; /* Menos padding */
+  }
+}

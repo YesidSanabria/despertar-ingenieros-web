@@ -95,3 +95,25 @@
   .collage-item:nth-child(5) { grid-column: 3 / 5; grid-row: 2 / 3; }
   .collage-item:nth-child(6) { grid-column: 4 / 5; grid-row: 2 / 3; }
 
+/* --- Estilos para pantallas pequeñas (móviles) --- */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 40vh; /* Reduce la altura del hero */
+    padding: 2rem;
+    align-items: center; /* Centra el título vertical y horizontalmente */
+    text-align: center;
+    justify-content: center;
+  }
+
+  .about-hero h1 {
+    font-size: 2.5rem; /* Reduce el tamaño del título */
+  }
+
+  .page-content {
+    padding: 2rem 1rem; /* Menos padding */
+  }
+  
+  .about-main {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+  }
+}

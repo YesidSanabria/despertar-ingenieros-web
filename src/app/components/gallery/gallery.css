@@ -53,3 +53,14 @@
   margin-top: 0px;
   margin-bottom: 0;
 }
+
+/* --- Estilos para pantallas pequeñas (móviles) --- */
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 2rem 1rem; /* Menos padding en móviles */
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas muy pequeñas */
+  }
+}

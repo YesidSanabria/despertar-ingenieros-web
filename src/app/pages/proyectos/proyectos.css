@@ -95,3 +95,22 @@
 .project-item:hover .item-overlay h3 {
   transform: translateY(0);
 }
+
+/* --- Estilos para pantallas pequeñas (móviles) --- */
+@media (max-width: 768px) {
+  .projects-hero {
+    padding: 3rem 1rem; /* Menos padding */
+  }
+
+  .projects-hero h1 {
+    font-size: 2.5rem; /* Título más pequeño */
+  }
+
+  .projects-hero p {
+    font-size: 1rem; /* Texto de introducción más pequeño */
+  }
+
+  .projects-gallery {
+    padding: 3rem 1rem; /* Menos padding */
+  }
+}

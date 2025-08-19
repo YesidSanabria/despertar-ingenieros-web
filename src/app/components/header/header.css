@@ -134,3 +134,26 @@ img {
   height: 2px;
   background-color: var(--color-accent);
 }
+
+/* --- Estilos para pantallas pequeñas (móviles) --- */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column; /* Apila el logo y los links */
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+    font-size: 0.9rem; /* Reduce tamaño de fuente de los links */
+  }
+
+  .top-bar {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem; /* Reduce tamaño de fuente de la barra superior */
+  }
+
+  .top-bar .container {
+    justify-content: center; /* Centra los íconos */
+  }
+}

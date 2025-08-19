@@ -111,6 +111,7 @@
 .collage-item:nth-child(4) { grid-column: 3 / 5; grid-row: 1 / 2; } 
 .collage-item:nth-child(5) { grid-column: 3 / 5; grid-row: 2 / 3; }
 .collage-item:nth-child(6) { grid-column: 4 / 5; grid-row: 2 / 3; }
+
 /* --- Estilos para el Link "Ver Material" --- */
 
 .material-link {
@@ -143,4 +144,35 @@
 .material-link span {
   position: relative;
   z-index: 4;
+}
+
+/* --- Estilos para pantallas pequeñas (móviles) --- */
+@media (max-width: 768px) {
+  .project-hero {
+    height: 40vh;
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+  }
+
+  .project-info, .project-collage {
+    padding: 2rem 1rem;
+  }
+
+  .collage-grid {
+    grid-template-columns: 1fr; /* Apila todo en una columna */
+    grid-template-rows: auto; /* La altura de la fila es automática */
+  }
+
+  .collage-item:nth-child(1),
+  .collage-item:nth-child(2),
+  .collage-item:nth-child(3),
+  .collage-item:nth-child(4),
+  .collage-item:nth-child(5),
+  .collage-item:nth-child(6) {
+    grid-column: auto;
+    grid-row: auto;
+    height: 250px; /* Altura fija para consistencia */
+  }
 }
