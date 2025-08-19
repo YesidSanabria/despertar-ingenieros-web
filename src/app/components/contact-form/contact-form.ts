@@ -9,9 +9,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./contact-form.css']
 })
 
-// Archivos permitidos: png, jpeg, pdf, word, excel para el envio a Netlify
-export class ContactFormComponent {
+export class ProveedoresComponent {
   fileError: string | null = null;
+  // Lista de archivos permitidos (incluyendo PDF para el catálogo)
   readonly allowedFileTypes = [
     'image/png', 'image/jpeg', 
     'application/pdf', 
@@ -20,7 +20,8 @@ export class ContactFormComponent {
     'application/vnd.ms-excel',
     'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
   ];
-//Validacion del tipo de archivo
+
+  //Validacion del tipo de archivo (funciona para cualquier input de archivo)
   onFileChange(event: any): void {
     const file = event.target.files[0];
     if (!file) {
@@ -30,11 +31,12 @@ export class ContactFormComponent {
     if (this.allowedFileTypes.includes(file.type)) {
       this.fileError = null;
     } else {
-      this.fileError = 'Archivo no valido. Por favor, selecciona un archivo permitido. (png, jpeg, Word, Excel)';
+      this.fileError = 'Archivo no valido. Por favor, selecciona un archivo permitido. (png, pdf,jpeg, Word, Excel)';
       event.target.value = null;
     }
   }
-//Envio del formulario
+
+  //Envio del formulario
   handleSubmit(event: Event): void {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
@@ -55,14 +57,14 @@ export class ContactFormComponent {
     })
     .then(() => {
       form.reset();
-      alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+      alert('¡Gracias por tu información! La revisaremos y nos pondremos en contacto.');
     })
     .catch((error) => {
       alert('Hubo un error al enviar el formulario.');
     })
     .finally(() => {
       submitButton.disabled = false;
-      submitButton.textContent = 'Contáctanos';
+      submitButton.textContent = 'Enviar Información'; // Texto original del botón de proveedores
     });
   }
 }

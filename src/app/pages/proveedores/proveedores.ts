@@ -30,7 +30,7 @@ export class ProveedoresComponent {
     if (this.allowedFileTypes.includes(file.type)) {
       this.fileError = null;
     } else {
-      this.fileError = 'Archivo no valido. Por favor, selecciona un archivo permitido.';
+      this.fileError = 'Archivo no valido. Por favor, selecciona un archivo permitido. (png, pdf,jpeg, Word, Excel)';
       event.target.value = null;
     }
   }
