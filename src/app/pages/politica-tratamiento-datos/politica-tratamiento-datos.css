@@ -1,19 +1,53 @@
-.page-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 5rem 2rem;
+.about-hero {
+  height: 60vh;
+  position: relative;
+  color: white;
+  background-image: url('/assets/images/about/politicas.jpg');
+  background-size: cover;
+  background-position: center;
+  
+  /* Ajustamos el flexbox */
+  display: flex;
+  align-items: flex-end;
+  padding: 4rem;
+  box-sizing: border-box;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: right;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Contenido general de la página */
+.page-content {
+  padding: 4rem 2rem;
+}
+
+.about-intro {
   text-align: left;
+  margin: 0 auto 4rem auto;
+  font-size: 1.2rem;
   line-height: 1.8;
+  color: #333;
 }
 
-.page-container h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.page-container .btn {
-  display: block;
-  width: fit-content;
-  margin: 3rem auto 0 auto;
-  text-align: center;
+.about-intro p {
+  margin-bottom: 1rem;
 }

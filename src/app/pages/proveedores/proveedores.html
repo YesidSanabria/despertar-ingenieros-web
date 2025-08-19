@@ -1,13 +1,67 @@
-<div class="page-container">
-  <h1>Información para Proveedores</h1>
-  <p>
-    En Indumármol estamos en una búsqueda constante de los mejores y más exclusivos materiales de piedra natural a nivel mundial. Valoramos la calidad, la innovación y la sostenibilidad en nuestros socios comerciales.
-  </p>
-  <p>
-    Si su empresa se dedica a la extracción, producción o distribución de mármol, granito, cuarcita, ónix u otras piedras naturales de alta gama, y desea formar parte de nuestra red de proveedores, le invitamos a contactarnos.
-  </p>
-  <p>
-    Por favor, envíe su catálogo de productos, certificaciones de calidad y propuesta comercial a nuestro departamento de compras al correo electrónico: compras.indumarmol@example.com.
-  </p>
-  <a routerLink="/" class="btn">Volver al Inicio</a>
+<section class="proveedores-section">
+<div class="form-container">
+  <div class="form-header">
+    <h2>¿Quieres ser parte de nuestra red de proveedores?</h2>
+    <p>¡Nos encantaría conocerte!</p>
+  </div>
+
+  <form name="proveedores" netlify netlify-honeypot="bot-field" method="POST" enctype="multipart/form-data" (submit)="handleSubmit($event)">
+    <input type="hidden" name="form-name" value="proveedores">
+    <p style="display: none;"><label>No llenar: <input name="bot-field"></label></p>
+
+    <fieldset>
+      <legend>Datos del proveedor</legend>
+      <div class="form-grid">
+        <div class="form-group"><label for="nombre-completo">Nombre completo</label><input type="text" id="nombre-completo" name="nombre-completo" required></div>
+        <div class="form-group"><label for="nombre-empresa">Nombre de la empresa</label><input type="text" id="nombre-empresa" name="nombre-empresa" required></div>
+        <div class="form-group"><label for="cargo">Cargo en la empresa</label><input type="text" id="cargo" name="cargo"></div>
+        <div class="form-group"><label for="telefono">Teléfono</label><input type="tel" id="telefono" name="telefono" required></div>
+        <div class="form-group"><label for="correo">Correo</label><input type="email" id="correo" name="correo" required></div>
+        <div class="form-group"><label for="ciudad">Ciudad</label><input type="text" id="ciudad" name="ciudad"></div>
+        <div class="form-group full-width"><label for="direccion">Dirección</label><input type="text" id="direccion" name="direccion" required></div>
+        <div class="form-group full-width"><label for="pagina-web">Página Web</label><input type="url" id="pagina-web" name="pagina-web"></div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Información comercial</legend>
+      <div class="form-grid">
+        <div class="form-group full-width"><label for="productos-ofrece">Productos que ofrece</label><input type="text" id="productos-ofrece" name="productos-ofrece"></div>
+        <div class="form-group"><label for="experiencia">Tiempo de experiencia en el mercado</label><input type="text" id="experiencia" name="experiencia"></div>
+        <div class="form-group"><label for="capacidad-produccion">Capacidad de producción / entrega</label><input type="text" id="capacidad-produccion" name="capacidad-produccion"></div>
+        <div class="form-group"><label for="condiciones-pago">Condiciones de pago</label><input type="text" id="condiciones-pago" name="condiciones-pago"></div>
+        <div class="form-group"><label for="tiempo-entrega">Tiempo de entrega promedio</label><input type="text" id="tiempo-entrega" name="tiempo-entrega"></div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Información fiscal</legend>
+      <div class="form-grid">
+        <div class="form-group"><label for="nit">NIT o identificación fiscal</label><input type="text" id="nit" name="nit"></div>
+        <div class="form-group">
+          <label for="certificaciones">Certificaciones de calidad</label>
+          <input type="file" id="certificaciones" name="certificaciones" (change)="onFileChange($event)">
+        </div>
+        <div class="form-group full-width">
+          <label for="adjunto-extra">Archivo Adjunto</label>
+           <input type="file" id="adjunto-extra" name="adjunto-extra" (change)="onFileChange($event)">
+        </div>
+      </div>
+    </fieldset>
+
+    <p *ngIf="fileError" class="error-text">{{ fileError }}</p>
+
+    <div class="form-group full-width">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+    </div>
+    <div class="form-footer">
+        <div class="form-group-check">
+            <input type="checkbox" id="autorizacion" name="autorizacion" required>
+            <label for="autorizacion">Autorizo el tratamiento de datos</label>
+        </div>
+        <button type="submit" class="btn">Enviar Información</button>
+    </div>
+  </form>
 </div>
+</section>

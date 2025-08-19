@@ -21,22 +21,15 @@ import { FooterComponent } from './components/footer/footer';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class AppComponent {
+export class AppComponent { 
   title = 'indumarmol-web';
-  showContactForm = true; // Por defecto, lo mostramos
+  showContactForm = true;
 
   constructor(private router: Router) {
-    // Escuchamos los cambios de ruta
     this.router.events.pipe(
       filter((event): event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      // Si la URL es '/proveedores', ocultamos el formulario.
-      // Si no, lo mostramos.
-      if (event.urlAfterRedirects === '/proveedores') {
-        this.showContactForm = false;
-      } else {
-        this.showContactForm = true;
-      }
+      this.showContactForm = event.urlAfterRedirects !== '/proveedores';
     });
   }
 }
