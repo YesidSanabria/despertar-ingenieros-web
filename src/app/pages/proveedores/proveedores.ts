@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './proveedores.html',
   styleUrls: ['./proveedores.css']
 })
-export class ProveedoresFormComponent {
+export class ProveedoresComponent {
   fileError: string | null = null;
   // Lista de archivos permitidos (incluyendo PDF para el catálogo)
   readonly allowedFileTypes = [
