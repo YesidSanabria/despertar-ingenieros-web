@@ -1,11 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { ProductService, Project } from '../../services/product.service';
 
 @Component({
   selector: 'app-gallery',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './gallery.html',
-  styleUrl: './gallery.css'
+  styleUrls: ['./gallery.css']
 })
-export class GalleryComponent {
+export class GalleryComponent implements OnInit {
+  projects: Project[] = []; // Array para guardar la lista de proyectos
 
+  constructor(private productService: ProductService) {}
+
+  ngOnInit(): void {
+    // Al iniciar el componente, pedimos todos los proyectos al servicio
+    this.productService.getAllProjects().subscribe(data => {
+      this.projects = data;
+    });
+  }
 }

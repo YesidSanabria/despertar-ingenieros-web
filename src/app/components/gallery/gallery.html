@@ -1,67 +1,10 @@
-<section id="proyectos" class="gallery-section">
+<section id="productos" class="gallery-section container">
   <div class="gallery-grid">
-    <div class="gallery-item">
-      <img src="assets/images/img.jpg" alt="Mármol">
-      <div class="item-info">
-        <a>MÁRMOL</a>
-        <p>Portmarine - Cartagena</p>
-      </div>
-    </div>
-    <div class="gallery-item">
-      <img src="assets/images/img.jpg" alt="Granito">
-      <div class="item-info">
-        <a>GRANITO</a>
-        <p>BBQ - Toberín</p>
-      </div>
-    </div>
-    <div class="gallery-item">
-      <img src="assets/images/img.jpg" alt="Piedra Bali">
-      <div class="item-info">
-        <a>PIEDRA BALI</a>
-        <p>Piscina Casa Malabar - Pereira</p>
-      </div>
-    </div>
-    <div class="gallery-item">
-      <img src="assets/images/img.jpg" alt="Mármol">
-      <div class="item-info">
-        <a>ÓNIX</a>
-        <p>Apt Edificio Mirage - Bogotá</p>
-      </div>
-    </div>
-    <div class="gallery-item">
-      <img src="assets/images/img.jpg" alt="Granito">
-      <div class="item-info">
-        <a>LAVA STONE</a>
-        <p>-</p>
-      </div>
-    </div>
-    <div class="gallery-item">
-      <img src="assets/images/img.jpg" alt="Piedra Bali">
-      <div class="item-info">
-        <a>ARENISCA</a>
-        <p>Mesa de Yeguas - Anapoima</p>
-      </div>
-    </div>
-    <div class="gallery-item">
-      <img src="assets/images/img.jpg" alt="Mármol">
-      <div class="item-info">
-        <a>QUARZITA</a>
-        <p>Mesón Cocina - Apt ZF</p>
-      </div>
-    </div>
-    <div class="gallery-item">
-      <img src="assets/images/img.jpg" alt="Granito">
-      <div class="item-info">
-        <a>TRAVERTINO</a>
-        <p>Casa Aviñon - Pereira</p>
-      </div>
-    </div>
-    <div class="gallery-item">
-      <img src="assets/images/img.jpg" alt="Piedra Bali">
-      <div class="item-info">
-        <a>CALIZA</a>
-        <p>Casa Farine - Barranquilla</p>
-      </div>
-    </div>
+    <a *ngFor="let project of projects" [routerLink]="['/proyectos', project.id]" class="gallery-item">
+      <img [src]="project.galleryThumbnail" [alt]="project.name">
+      <div class="item-overlay">
+        <h3>{{ project.name }}</h3>
+        </div>
+    </a>
   </div>
 </section>

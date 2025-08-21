@@ -53,7 +53,9 @@
 .footer-bottom .separator {
   margin: 0 1rem;
 }
-
+.link{
+  color : #ffffff;
+}
 /* --- Estilos para pantallas pequeñas (móviles) --- */
 @media (max-width: 850px) {
   .footer-main {
