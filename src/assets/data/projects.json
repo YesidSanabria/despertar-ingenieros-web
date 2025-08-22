@@ -20,8 +20,8 @@
     "featuredMaterialLink": "/productos/marmol"
   },
   {
-    "id": "casa-villa-espana",
-    "name": "Casa Villa España",
+    "id": "Medellin",
+    "name": "Medellín",
     "galleryThumbnail": "assets/images/projects/casa-villa-espana1.jpg",
     "heroImage": "assets/images/projects/detail/villa-espana-hero.jpg",
     "location": "Bogotá, Colombia",
@@ -41,8 +41,8 @@
   },
   
   {
-    "id": "casa-villa-espana",
-    "name": "Casa Villa España",
+    "id": "Bogota",
+    "name": "Bogotá",
     "galleryThumbnail": "assets/images/projects/casa-villa-espana2.jpg",
     "heroImage": "assets/images/projects/detail/villa-espana-hero.jpg",
     "location": "Bogotá, Colombia",
