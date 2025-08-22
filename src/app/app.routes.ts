@@ -10,13 +10,7 @@ import { ProjectDetailComponent } from './pages/project-detail/project-detail';
 
 export const routes: Routes = [
         
-    { path: 'productos/:id', component: ProductPageComponent },
-    { path: 'proyectos/:id', component: ProjectDetailComponent },
-    { path: 'proyectos', component: ProyectosComponent },
-    { path: 'quienes-somos', component: QuienesSomosComponent },
-    { path: 'politica-garantia', component: PoliticaGarantiaComponent },
-    { path: 'tratamiento-datos', component: PoliticaTratamientoDatosComponent },
-    { path: 'proveedores', component: ProveedoresComponent },
+   
     
     { path: '', component: HomeComponent },
 
