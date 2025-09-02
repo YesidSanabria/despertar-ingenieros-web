@@ -56,6 +56,32 @@
 .link{
   color : #ffffff;
 }
+
+/* --- Estilos para el Sub-Footer --- */
+
+.sub-footer {
+  background-color: #1f2323; /* Un gris un poco más oscuro para diferenciar */
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.sub-footer p {
+  margin: 0;
+}
+
+.sub-footer a {
+  color: #ffffff; /* Texto en blanco para que resalte */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.sub-footer a:hover {
+  color: var(--color-accent); /* Color de acento al pasar el mouse */
+}
+
 /* --- Estilos para pantallas pequeñas (móviles) --- */
 @media (max-width: 850px) {
   .footer-main {
