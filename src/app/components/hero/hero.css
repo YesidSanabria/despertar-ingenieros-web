@@ -1,6 +1,6 @@
 .hero-section {
   position: relative; /* Contenedor para los elementos absolutos */
-  height: 100vh;
+  height: 75vh;
   color: var(--color-text-light);
   display: flex;
   justify-content: center;

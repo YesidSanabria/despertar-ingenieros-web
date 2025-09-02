@@ -1,15 +1,17 @@
-/* Hero del Producto */
+/* --- ESTILOS DE ESCRITORIO (TU CÓDIGO ORIGINAL) --- */
+
 .product-page {
   margin: 100px;
+  margin-top: 40px;
 }
 .product-hero {
   position: relative;
-  height: 80vh;
+  height: 75vh;
   background-position: center;
   background-size: cover;
   display: flex;
-  justify-content: flex-end; /* Alinea el título a la derecha */
-  align-items: flex-end;   /* Alinea el título abajo */
+  justify-content: flex-end;
+  align-items: flex-end;
   padding: 4rem;
   box-sizing: border-box;
 }
@@ -23,7 +25,7 @@
 }
 
 .product-title {
-  font-family: CasperR;
+  font-family: CasperR, serif;
   letter-spacing: 2.5px;
   margin-bottom: 0;
   position: relative;
@@ -33,20 +35,17 @@
   text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
-/* Secciones de Contenido */
-.description-section, .applications-section, .stone-gallery-section {
-  padding-top: 0rem;
-}
+
 
 .description-section p {
-  font-family: CasperR;
+  font-family: CasperR, serif;
   margin: 0 auto;
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.8;
+  max-width: 900px;
 }
 
-/* Aplicaciones */
 .applications-section h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
@@ -56,8 +55,10 @@
 .applications-section ul {
   list-style: none;
   padding: 0;
+  columns: 2; /* Dos columnas para escritorio */
+  column-gap: 2rem;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto; /* Centra el bloque de la lista */
 }
 
 .applications-section li {
@@ -77,12 +78,10 @@
   margin-right: 1rem;
 }
 
-/* Galería de Piedras */
 .stone-gallery-section h2 {
   font-size: 2.5rem;
   text-align: left;
 }
-
 
 .stone-category h3 {
   font-size: 1.8rem;
@@ -124,58 +123,56 @@
   margin: 0;
   background-color: #f9f9f9;
   font-weight: 500;
+  text-align: left;
 }
 
-
-/* Pantalla de Carga */
-.loading-screen {
+.loading-screen, .error-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  font-size: 1.5rem;
-}
-.applications-section ul {
-    list-style: none;
-    padding: 0;
-    columns: 1;
-    max-width: 900px;
-    margin: 0
-  }
-
-  .error-container {
-    text-align: center;
-    padding: 2rem;
-    margin: 2rem auto;
-    border: 1px solid #ff8a8a;
-    background-color: #ffeaea;
-    color: #c51212;
-    border-radius: 8px;
-    max-width: 800px;
+  padding: 5rem 2rem;
+  min-height: 50vh;
 }
 
-/* --- Estilos para pantallas pequeñas (móviles) --- */
+/* ================================================= */
+/* --- ESTILOS RESPONSIVE (SOLO PARA MÓVILES) --- */
+/* ================================================= */
 @media (max-width: 768px) {
+  /* Quitamos el margen grande de la página en móvil */
+  .product-page {
+    margin: 0;
+  }
+  
   .product-hero {
-    height: 50vh; /* Menos altura en móvil */
+    height: 50vh;
     padding: 2rem;
-    justify-content: center; /* Centra el título en móvil */
-    text-align: center;
+    justify-content: left;
+    text-align: left;
   }
 
   .product-title {
-    font-size: 3rem; /* Título más pequeño */
+    font-size: 3rem;
   }
 
   .description-section, .applications-section, .stone-gallery-section {
-    padding: 2rem 1rem; /* Menos padding */
+    padding: 2rem 1rem;
+  }
+  
+  /* Hacemos que la descripción ocupe el ancho y no se centre */
+  .description-section p {
+    margin: 0;
+    max-width: 100%;
   }
 
+  /* Hacemos que la lista de aplicaciones ocupe una sola columna */
   .applications-section ul {
-    columns: 1; /* Una sola columna para la lista */
+    columns: 1;
+    margin: 0;
+    max-width: 100%;
   }
 
+  /* Centramos los títulos de sección en móvil */
   .applications-section h2, .stone-gallery-section h2, .stone-category h3 {
-    text-align: center; /* Centra los títulos de sección */
+    text-align: center;
   }
 }
