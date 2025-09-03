@@ -1,6 +1,7 @@
 <section id="productos" class="gallery-section container">
   <div class="gallery-grid">
-    <a *ngFor="let project of projects" [routerLink]="['/proyectos', project.id]" class="gallery-item">
+    <!---<a *ngFor="let project of projects" [routerLink]="['/proyectos', project.id]" class="gallery-item"></a>--->
+    <a *ngFor="let project of projects" class="gallery-item">
       <img [src]="project.galleryThumbnail" [alt]="project.name">
       <div class="item-overlay">
         <h3>{{ project.name }}</h3>
