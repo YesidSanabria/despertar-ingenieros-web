@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, ElementRef } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, NavigationEnd, RouterModule } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,7 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
   isDropdownOpen = false;
+  isProductsActive = false;
 
   // Productos que hay en el menú
   products = [
@@ -27,7 +29,15 @@ export class HeaderComponent {
     { id: 'travertino', name: 'Travertino' }
   ];
 
-  constructor(private eRef: ElementRef) {}
+ constructor(private eRef: ElementRef, private router: Router) {
+    // Escuchamos los eventos de navegación
+    this.router.events.pipe(
+      filter((event): event is NavigationEnd => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      // Si la URL actual empieza con '/productos', activamos la variable
+      this.isProductsActive = event.urlAfterRedirects.startsWith('/productos');
+    });
+  }
 
   toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;
