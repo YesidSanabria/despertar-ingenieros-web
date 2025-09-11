@@ -1,4 +1,0 @@
-Hero Component (app-hero) ✨
-Este es el componente de bienvenida y lo primero que verán los visitantes. 
-Su única función es mostrar la imagen principal a pantalla completa con el gran título en el centro 
-("Piedra que inspira espacios...") y el botón principal de "Cotiza"
