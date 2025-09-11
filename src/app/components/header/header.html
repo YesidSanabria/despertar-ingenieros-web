@@ -29,12 +29,13 @@
 
       <!---Pendiente animacion del color del texto Producto-->
       <li class="dropdown">
+        
         <a routerLinkActive="active-link" (click)="toggleDropdown()" class="dropdown-toggle">
           Productos <span class="arrow">▼</span>
         </a>
         <ul class="dropdown-menu" *ngIf="isDropdownOpen">
           <li *ngFor="let product of products">
-            <a [routerLink]="['/productos', product.id]">{{ product.name }}</a>
+            <a [routerLink]="['/productos', product.id]" (click)="isDropdownOpen = false">{{ product.name }}</a>
           </li>
         </ul>
       </li>
