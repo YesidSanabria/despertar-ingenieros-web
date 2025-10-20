@@ -15,8 +15,11 @@ export class HeaderComponent {
   isServiciosActive = false;
 
   servicios = [
-    { id: 'mantenimientopreventivo', name: 'Mantenimiento Preventivo' },
-
+    { id: 'mantenimiento-preventivo', name: 'Mantenimiento Preventivo' }, 
+    { id: 'redes-de-baja-tension', name: 'Redes de Baja Tensión' },
+    { id: 'redes-de-media-tension', name: 'Redes de Media Tensión' },
+    { id: 'certificaciones-retie', name: 'Gestion de Certificaciones RETIE' },
+    { id: 'obras-civiles', name: 'Obras Civiles' }
   ];
 
  constructor(private eRef: ElementRef, private router: Router) {

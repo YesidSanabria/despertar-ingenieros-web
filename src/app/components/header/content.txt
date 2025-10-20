@@ -1,8 +1,0 @@
-Header Component (app-header) 🔝
-
-Aquí irá toda la sección superior de la página. Esto incluye dos partes principales:
-
-1. La barra de contacto de arriba con el teléfono y el correo electrónico.
-
-2. La barra de navegación principal con el logo de Indumármol a la izquierda y los enlaces 
-(Inicio, Productos, Proyectos, Contáctanos) a la derecha.

@@ -42,7 +42,7 @@
           </a>
           <ul class="dropdown-menu" *ngIf="isDropdownOpen">
             <li *ngFor="let servicio of servicios">
-              <a [routerLink]="['/productos', servicio.id]" (click)="isDropdownOpen = false">{{ servicio.name }}</a>
+              <a [routerLink]="['/servicios', servicio.id]" (click)="isDropdownOpen = false">{{ servicio.name }}</a>
             </li>
           </ul>
         </li>

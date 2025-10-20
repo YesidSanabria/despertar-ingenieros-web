@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PoliticaGarantia } from './politica-garantia';
+import { BajaTension } from './baja-tension';
 
-describe('PoliticaGarantia', () => {
-  let component: PoliticaGarantia;
-  let fixture: ComponentFixture<PoliticaGarantia>;
+describe('BajaTension', () => {
+  let component: BajaTension;
+  let fixture: ComponentFixture<BajaTension>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PoliticaGarantia]
+      imports: [BajaTension]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PoliticaGarantia);
+    fixture = TestBed.createComponent(BajaTension);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
