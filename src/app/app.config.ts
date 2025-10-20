@@ -12,7 +12,6 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes,
       withInMemoryScrolling({
-        // Esta opción fuerza a la página a ir al inicio en cada navegación
         scrollPositionRestoration: 'top',
         anchorScrolling: 'enabled',
       })

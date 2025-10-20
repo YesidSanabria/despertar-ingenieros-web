@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, NavigationEnd, RouterOutlet, RouterModule } from '@angular/router';
-import { filter } from 'rxjs';
-
-import { HeaderComponent } from './components/header/header';
-import { ContactFormComponent } from './components/contact-form/contact-form';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './components/header/header'; // <-- Importar Header
 import { FooterComponent } from './components/footer/footer';
+import { ContactFormComponent } from './pages/contact/contact';
 
 @Component({
   selector: 'app-root',
@@ -13,23 +11,14 @@ import { FooterComponent } from './components/footer/footer';
   imports: [
     CommonModule,
     RouterOutlet,
-    RouterModule,
     HeaderComponent,
     FooterComponent,
     ContactFormComponent
-  ],
+],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
-export class AppComponent { 
-  title = 'indumarmol-web';
-  showContactForm = true;
-
-  constructor(private router: Router) {
-    this.router.events.pipe(
-      filter((event): event is NavigationEnd => event instanceof NavigationEnd)
-    ).subscribe((event: NavigationEnd) => {
-      this.showContactForm = event.urlAfterRedirects !== '/proveedores';
-    });
-  }
+export class AppComponent {
+  title = 'despertar-ingenieros-web';
+ showContactForm = true;
 }

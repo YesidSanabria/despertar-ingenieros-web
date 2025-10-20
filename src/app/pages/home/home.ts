@@ -1,19 +1,15 @@
+// src/app/pages/home/home.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { HeroComponent } from '../../components/hero/hero';
-import { GalleryComponent } from '../../components/gallery/gallery';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    CommonModule,
-    HeroComponent,
-    GalleryComponent,
-  ],
+  imports: [CommonModule, HeroComponent ],
   templateUrl: './home.html',
-  styleUrl: './home.css'
+  styleUrls: ['./home.css']
 })
 export class HomeComponent {
 

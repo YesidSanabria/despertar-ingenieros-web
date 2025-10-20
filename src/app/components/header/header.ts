@@ -12,30 +12,18 @@ import { filter } from 'rxjs/operators';
 })
 export class HeaderComponent {
   isDropdownOpen = false;
-  isProductsActive = false;
+  isServiciosActive = false;
 
-  // Productos que hay en el menú
-  products = [
-    { id: 'areniscas', name: 'Areniscas' },
-    { id: 'calizas', name: 'Calizas' },
-    { id: 'granito', name: 'Granito' },
-    { id: 'lavastone', name: 'Lava Stone' },
-    { id: 'marmol', name: 'Mármol' },
-    //{ id: 'mosaicos', name: 'Mosaicos' },
-    { id: 'onix', name: 'Ónix' },
-    { id: 'piedrabali', name: 'Piedra Bali' },
-    { id: 'quarzita', name: 'Quarzita' },
-    { id: 'quarzstonesilestone', name: 'Quarzstone y Silestone' },
-    { id: 'travertino', name: 'Travertino' }
+  servicios = [
+    { id: 'mantenimientopreventivo', name: 'Mantenimiento Preventivo' },
+
   ];
 
  constructor(private eRef: ElementRef, private router: Router) {
-    // Escuchamos los eventos de navegación
     this.router.events.pipe(
       filter((event): event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      // Si la URL actual empieza con '/productos', activamos la variable
-      this.isProductsActive = event.urlAfterRedirects.startsWith('/productos');
+      this.isServiciosActive = event.urlAfterRedirects.startsWith('/servicios');
     });
   }
 

@@ -1,47 +1,57 @@
-<header id="">
+<header>
   <div class="top-bar">
-  <div class="container">
-    <span>
-      <a class="icon" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"> 
-        <img src="assets/images/instagram.png" alt="Instagram" class="icon">
-      </a>
-      <img src="assets/images/phone.png" alt="Teléfono" class="icon">
-      <a href="https://wa.me/573112099447" class="link" target="_blank" rel="noopener noreferrer">+57 311 2099447</a>
-    </span>
-    <span>
-      
-      <img src="assets/images/email.png" alt="Email" class="icon">
-      <a href="mailto:indumarmolcol@gmail.com" class="link">
-      indumarmol@gmail.com</a>
-    </span>
+    <div class="container top-bar-content">
+      <div class="contact-details">
+        <span>
+          <img src="assets/images/phone.png" alt="Teléfono" class="icon">
+          <a href="https://wa.me/573104580523" class="link">+57 310 4580523</a>
+        </span>
+        <span>
+          <img src="assets/images/phone.png" alt="Teléfono" class="icon">
+          <a href="https://wa.me/573104580523" class="link">+57 310 4580523</a>
+        </span>
+        <span>
+          <img src="assets/images/email.png" alt="Email" class="icon">
+          <a href="mailto:topologia33@hotmail.com" class="link">topologia33@hotmail.com</a>
+        </span>
+      </div>
+      <div class="social-details">
+        <a href="https://www.facebook.com/share/175iVdqyNY/" target="_blank">
+          <img src="assets/images/facebook.png" alt="Facebook" class="icon">
+        </a>
+      </div>
+    </div>
   </div>
-</div>
-  <nav class="main-nav container">
-    <a href="/" class="logo">
-      <img class="img" src="/assets/images/logotipo.png" alt="Logo Indumármol">
-    </a>
-    <ul class="nav-links">
-      <li>
-        <a routerLink="/" 
-          routerLinkActive="active-link" 
-          [routerLinkActiveOptions]="{exact: true}">Inicio</a>
-      </li>
 
-      <!---Pendiente animacion del color del texto Producto-->
-      <li class="dropdown" [class.active-link-parent]="isProductsActive">
+  <nav class="main-nav">
+    <div class="container main-nav-content">
+      <a routerLink="/" class="logo">
+        <img class="img" src="assets/images/logo.png" alt="Logo Indumármol">
+        <span class="company-title">Despertar Ingenieros S.A.S.</span>
+      </a>
+      <ul class="nav-links">
+        <li>
+          <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+        </li>
+        <li>
+          <a routerLink="/quienessomos" routerLinkActive="active-link">Quienes Somos</a>
+        </li>
+        <li class="dropdown" [class.active-link-parent]="isServiciosActive">
           <a (click)="toggleDropdown()" class="dropdown-toggle">
-            Productos <span class="arrow">▼</span>
+            Nuestros Servicios <span class="arrow">▼</span>
           </a>
           <ul class="dropdown-menu" *ngIf="isDropdownOpen">
-            <li *ngFor="let product of products">
-              <a [routerLink]="['/productos', product.id]" (click)="isDropdownOpen = false">{{ product.name }}</a>
+            <li *ngFor="let servicio of servicios">
+              <a [routerLink]="['/productos', servicio.id]" (click)="isDropdownOpen = false">{{ servicio.name }}</a>
             </li>
           </ul>
         </li>
         <li>
           <a routerLink="/proyectos" routerLinkActive="active-link">Proyectos</a>
         </li>
-      <li><a href="#contacto" (click)="scrollToContact($event)">Contáctanos</a></li>
-    </ul>
+          
+      </ul>
+      <a href="/contacto" class="cta-button">Contáctanos</a>
+    </div>
   </nav>
 </header>

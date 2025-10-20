@@ -1,24 +1,15 @@
 .hero-section {
-  position: relative; /* Contenedor para los elementos absolutos */
-  height: 75vh;
-  color: var(--color-text-light);
+  position: relative;
+  height: 600px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  overflow: hidden; /* Evita que el video se desborde */
-}
+  text-align: left;
+  overflow: hidden;
 
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 1; /* Capa del fondo */
+  background-image: url('/assets/images/about/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-overlay {
@@ -27,51 +18,461 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Negro con 40% de opacidad */
-  z-index: 2; /* Capa sobre el video */
+  /* Oscurece el 50% para que el texto blanco resalte */
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
 }
 
 .hero-content {
-  position: relative; /* Para que se ponga sobre el overlay */
-  z-index: 3; /* Capa del contenido, por encima de todo */
+  position: relative;
+  z-index: 2;
+  color: var(--color-white); /* Texto blanco para todo el contenido del hero */
+  max-width: 1200px; /* Limita el ancho total del contenido */
+  margin: 0 auto; /* Centra el hero-content */
+  padding: 0 40px; /* Espaciado lateral */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+/* Contenedor específico para el texto y botón a la izquierda */
+.hero-content .text-container {
+  width: 50%; /* Limita el ancho del bloque de texto a la mitad de la pantalla (o menos) */
+  /* Ajusta este valor si quieres que el texto ocupe más o menos espacio lateral */
 }
 
 .hero-content h1 {
-  font-family: 'CasperB';
-  font-size: 3.5rem;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-  margin-bottom: 2rem;
+  font-size: 3.8rem; /* Tamaño de fuente grande para el título principal */
+  line-height: 1.1; /* Ajusta la altura de línea */
+  margin-bottom: 15px;
+  text-transform: uppercase; /* MAYÚSCULAS para el título como en el ejemplo */
+  font-weight: 700; /* Negrita */
 }
 
-.hero-content h2 {
-  font-family: 'CasperR';
-  font-size: 3rem;
-  letter-spacing: 2px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5); 
-  margin-top: 0PX;
+.hero-content h1 span { /* Estilo para "TRANSFORMAN" */
+  color: var(--color-red-accent); /* Color rojo definido en las variables */
+  display: block; /* Para que "TRANSFORMAN" salte de línea */
 }
 
+.hero-content p {
+  font-size: 1.2rem; /* Tamaño de fuente para el subtítulo/descripción */
+  line-height: 1.6;
+  margin-bottom: 30px; /* Espacio antes del botón */
+  max-width: 80%; /* Si quieres que el párrafo sea un poco más estrecho que el título */
+}
+
+/* Estilos para el botón "Cotiza" */
+.hero-content .btn {
+  display: inline-block;
+  background-color: var(--color-red-accent); /* Rojo como en el ejemplo */
+  color: var(--color-white);
+  padding: 15px 35px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600; /* Negrita */
+  transition: background-color 0.3s ease;
+  border: none; /* Elimina borde si lo tiene */
+  cursor: pointer;
+}
+
+.hero-content .btn:hover {
+  background-color: darken(var(--color-red-accent), 10%); /* Oscurece el botón al pasar el mouse */
+  /* Si no usas preprocesadores, puedes usar un color fijo como: #cc3333 */
+}
+
+
+/* --- SECCIÓN HERO2 (ajustes si es necesario) --- */
 .hero2 {
-  padding-top: 10px;
+  padding: 20px 0;
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: 300; /* Un peso de fuente más ligero y elegante */
+  background-color: #f8f8f8;
+}
+
+.hero2 p {
+  font-size: 1.1rem;
   color: #555;
+}
+
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #253F83;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #253F83;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+
+/* ============================================ */
+/* SECCIÓN DE SERVICIOS             */
+/* ============================================ */
+
+.services-section {
+  padding: 80px 0;
+  background-color: #f9f9f9; /* Un fondo gris muy claro para contrastar */
+}
+
+/* Contenedor general para centrar contenido */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Estilos para el encabezado de la sección */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #333; /* Color de texto oscuro */
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px; /* Limita el ancho del párrafo para mejor legibilidad */
+  margin: 0 auto;
   line-height: 1.6;
 }
 
-/* --- Estilos para pantallas pequeñas (móviles) --- */
+/* Grid que contiene las tarjetas */
+.services-grid {
+  display: grid;
+  /* Crea columnas responsivas: se adaptan al ancho disponible */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px; /* Espacio entre las tarjetas */
+}
+
+/* Estilos para cada tarjeta de servicio */
+.service-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9e9e9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px); /* Efecto de levantar la tarjeta */
+  box-shadow: 0 8px 25px rgba(42, 61, 102, 0.1); /* Sombra más pronunciada con un toque de azul */
+}
+
+
+.service-card .card-icon img {
+  height: 200px; /* Ajusta el tamaño de tus íconos */
+  width: auto;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  color: #2a3d66; /* Azul oscuro del nav para los títulos */
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* Estilos para el enlace "Solicitar Información" */
+.service-card .card-cta {
+  color: #e74c3c; /* Color rojo de acento, como en tu ejemplo */
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre el texto y la flecha */
+  transition: color 0.3s ease;
+}
+
+.service-card .card-cta:hover {
+  color: #c0392b; /* Rojo más oscuro al pasar el mouse */
+}
+
+
+/* --- SECCIÓN HERO2 (si todavía la necesitas) --- */
+.hero2 {
+  display: none; /* Te sugiero ocultar o eliminar esta sección, ya que la nueva sección de servicios la reemplaza funcionalmente */
+}
+
+
+.cta-banner {
+  display: flex; /* ¡LA CLAVE! Activa Flexbox */
+  align-items: center; /* Centra los elementos verticalmente */
+  background-color: #2a3d66; /* El color azul de tu tema */
+  color: #ffffff; /* El texto será blanco */
+  overflow: hidden; /* Evita desbordamientos */
+  border-radius: 10px; /* Opcional: para bordes redondeados */
+  margin: 80px auto; /* Espacio arriba/abajo y centrado */
+  max-width: 1200px; /* Ancho máximo del banner */
+  min-height: 300px; /* Altura mínima */
+}
+
+/* Contenedor para la imagen de la izquierda */
+.cta-image-container {
+  flex: 1 0 45%; /* Ocupa el 45% del ancho y no se encoge */
+  align-self: stretch; /* Hace que el contenedor ocupe toda la altura del banner */
+}
+
+.cta-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* MUY IMPORTANTE: Escala la imagen para llenar el contenedor sin deformarse */
+  display: block;
+}
+
+/* Contenedor para el texto y el botón de la derecha */
+.cta-text-container {
+  flex: 1 1 55%; /* Ocupa el 55% restante y puede encogerse si es necesario */
+  padding: 40px 60px; /* Espaciado interno para que el texto respire */
+  text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.cta-text-container h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+.btn-cta {
+  background-color: #d1b49a; /* El color de acento de tu botón "Contáctanos" */
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #a58a70; /* Un tono más oscuro para el hover */
+}
+
+
+/* Reseteo básico para eliminar márgenes por defecto */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para la sección del banner */
+.hero-banner {
+    /* 1. Usamos la imagen del ingeniero como fondo */
+    background-image: url('/assets/images/about/AnFooter.png');
+    
+    /* 2. Hacemos que la imagen cubra toda la sección */
+    background-size: expand;
+    background-position: center;
+    
+    /* 3. Definimos un alto mínimo y aseguramos que ocupe todo el ancho */
+    width: 100%;
+    min-height: 450px; /* Puedes ajustar esta altura */
+
+    /* 4. Usamos Flexbox para posicionar el contenido */
+    display: flex;
+    align-items: center;     /* Centra el contenido verticalmente */
+    justify-content: flex-end; /* Mueve el contenido hacia la derecha */
+    
+    box-sizing: border-box;
+    padding: 2rem 5%; /* Añade padding a los lados */
+}
+
+/* Estilos para el contenedor del texto y botón */
+.banner-content {
+    max-width: 50%; /* Limita el ancho del texto a la mitad derecha */
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+/* Estilos para el título (h1) */
+.banner-content h1 {
+    font-size: 2.8rem; /* Tamaño de fuente grande */
+    font-weight: 700;
+    color: #333; /* Color de texto oscuro */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para el párrafo (p) */
+.banner-content p {
+    font-size: 1rem;
+    color: #555; /* Color de texto gris oscuro */
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Estilos para el botón de "Contáctanos" */
+.banner-content .cta-button {
+    display: inline-block;
+    background-color: #f39c12; /* Color amarillo/dorado */
+    color: #000000; /* Color de texto negro */
+    padding: 12px 24px;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-content .cta-button:hover {
+    background-color: #e68e00; /* Color más oscuro al pasar el ratón */
+}
+
+/* ----- Responsividad para móviles ----- */
 @media (max-width: 768px) {
+    .hero-banner {
+        /* En móviles, centramos el contenido */
+        justify-content: center;
+        align-items: flex-start; /* Alineamos arriba */
+        padding-top: 3rem;
+        min-height: 500px;
+        text-align: center;
+        /* El ingeniero puede quedar oculto, priorizamos el texto */
+        background-position: right center; 
+    }
+
+    .banner-content {
+        max-width: 90%; /* El contenido ocupa casi todo el ancho */
+        /* Añadimos un fondo semi-transparente para asegurar legibilidad */
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 8px;
+    }
+
+    .banner-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .banner-content p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* --- RESPONSIVIDAD --- */
+@media (max-width: 900px) {
+  .cta-banner {
+    flex-direction: column; /* Apila la imagen encima del texto en pantallas pequeñas */
+    text-align: center;
+  }
+
+  .cta-image-container {
+    width: 100%;
+    max-height: 250px; /* Limita la altura de la imagen en móviles */
+  }
+
+  .cta-text-container {
+    padding: 40px 30px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* MEDIA QUERIES para responsividad (muy importante para este tipo de diseño) */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 500px; /* Menos altura en móviles */
+    text-align: center; /* Centrar texto en móviles */
+  }
+
+  .hero-content .text-container {
+    width: 90%; /* Más ancho en móviles */
+    margin: 0 auto; /* Centrar el bloque de texto en móviles */
+  }
+
   .hero-content h1 {
     font-size: 2.5rem;
   }
 
-  .hero-content h2 {
-    font-size: 2rem;
+  .hero-content h1 span {
+    display: inline; /* Que no salte de línea si el título es corto en móvil */
   }
 
-  .hero2 {
-    font-size: 1.2rem;
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+  .hero-content .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
   }
 }

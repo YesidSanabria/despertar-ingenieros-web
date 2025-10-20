@@ -2,50 +2,35 @@
 <html lang="es">
 <head>
   <meta charset="utf-t">
-  <title>Indumarmol</title>
+  <title>DESPERTAR INGENIEROS S.A.S.</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="description" content="Expertos en la selección e instalación de mármol, granito, cuarcita y piedras naturales para cocinas, baños y proyectos arquitectónicos en Colombia.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
   
   
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-    <input type="text" name="nombres" />
-    <input type="text" name="apellidos" />
-    <input type="email" name="correo" />
-    <input type="tel" name="telefono" />
-    <select name="cliente"></select>
-    <select name="ciudad"></select>
-    <input type="text" name="direccion" />
-    <input type="file" name="archivo" />
-    <textarea name="mensaje"></textarea>
-    <input type="checkbox" name="autorizacion" />
+  <form 
+    name="contact-consulta" 
+    netlify 
+    netlify-honeypot="bot-field" 
+    hidden>
+    
+    <input type="hidden" name="form-name" value="contact-consulta">
+    <p style="display: none;">
+      <label>No llenes esto si eres humano: <input name="bot-field"></label>
+    </p>
+
+    <input type="text" name="nombre-completo">
+    <input type="email" name="email">
+    <input type="tel" name="celular">
+    <input type="text" name="empresa">
+    <textarea name="tema-interes"></textarea>
+    <input type="checkbox" name="politica-datos">
   </form>
-
-
-  <form name="proveedores" netlify hidden>
-  <input type="text" name="nombre-completo" />
-  <input type="text" name="nombre-empresa" />
-  <input type="text" name="cargo" />
-  <input type="tel" name="telefono" />
-  <input type="email" name="correo" />
-  <input type="text" name="ciudad" />
-  <input type="text" name="direccion" />
-  <input type="url" name="pagina-web" />
-  <input type="text" name="productos-ofrece" />
-  <input type="text" name="experiencia" />
-  <input type="text" name="capacidad-produccion" />
-  <input type="text" name="condiciones-pago" />
-  <input type="text" name="tiempo-entrega" />
-  <input type="text" name="nit" />
-  <input type="file" name="certificaciones" />
-  <input type="file" name="adjunto-extra" />
-  <textarea name="mensaje"></textarea>
-  <input type="checkbox" name="autorizacion" />
-</form>
   <app-root></app-root>
 </body>
 </html>

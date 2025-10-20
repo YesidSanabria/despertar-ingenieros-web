@@ -1,5 +1,0 @@
-Contact Form Component (app-contact-form) ✉️
-Este componente contendrá toda la sección de "Contáctanos". 
-Dentro de él, el formulario con todos sus campos 
-(Nombres, Apellidos, Correo, Mensaje, etc.), 
-la casilla de verificación para autorizar el tratamiento de datos y el botón final para enviar el formulario.
