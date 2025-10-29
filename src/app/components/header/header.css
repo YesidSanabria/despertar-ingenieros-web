@@ -189,11 +189,6 @@ li.active-link-parent > a.dropdown-toggle::after {
 }
 
 @media (max-width: 900px) {
- .top-bar-content {
- flex-direction: column;
- gap: 0.5rem;
- padding: 0.5rem 0;
- }
  .contact-details {
  flex-wrap: wrap;
  justify-content: center;
@@ -225,13 +220,3 @@ li.active-link-parent > a.dropdown-toggle::after {
  }
 }
 
-@media (max-width: 480px) {
- .contact-details {
- flex-direction: column;
- align-items: center;
- gap: 0.5rem;
- }
- .top-bar .link {
- font-size: 0.75rem;
- }
-}
