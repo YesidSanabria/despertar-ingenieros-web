@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "indumarmol-web": {
+    "despertar-ingenieros-web": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -57,10 +57,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "indumarmol-web:build:production"
+              "buildTarget": "despertar-ingenieros-web:build:production"
             },
             "development": {
-              "buildTarget": "indumarmol-web:build:development"
+              "buildTarget": "despertar-ingenieros-web:build:development"
             }
           },
           "defaultConfiguration": "development"

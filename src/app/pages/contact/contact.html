@@ -5,77 +5,75 @@
   </div>
 </div>
 </section>
-<section class="hero-contact">
 
 
-<section class="intro-section">
-  <div class="intro-content">
-    <h2>Solicita una consulta</h2>
-    <p>Te guiamos hacia la certificación ideal para tus proyectos.</p>
-    <p>Nuestro equipo de especialistas en normativa eléctrica está listo para escucharte, entender tus necesidades específicas y brindarte una asesoría personalizada que garantice el cumplimiento y la seguridad en todas tus instalaciones.</p>
-    <p>Completa el formulario y solicita tu consulta experta sin compromiso. Estamos aquí para facilitarte el camino hacia la obtención de tus certificados eléctricos, asegurando decisiones informadas y resultados efectivos.</p>
-    <p><strong>Gracias por tu atención.</strong></p>
-    <p class="privacy-note">*Con el fin de cumplir nuestra política de protección de datos te invitamos para que por favor te registres y/o actualices tu información de contacto.</p>
-  </div>
-</section>
+  <section class="intro-section">
+    <div class="intro-content">
+      <h2>Solicita una consulta</h2>
+      <p>Te guiamos hacia la certificación ideal para tus proyectos.</p>
+      <p>Nuestro equipo de especialistas en normativa eléctrica está listo para escucharte, entender tus necesidades específicas y brindarte una asesoría personalizada que garantice el cumplimiento y la seguridad en todas tus instalaciones.</p>
+      <p>Completa el formulario y solicita tu consulta experta sin compromiso. Estamos aquí para facilitarte el camino hacia la obtención de tus certificados eléctricos, asegurando decisiones informadas y resultados efectivos.</p>
+      <p><strong>Gracias por tu atención.</strong></p>
+      <p class="privacy-note">*Con el fin de cumplir nuestra política de protección de datos te invitamos para que por favor te registres y/o actualices tu información de contacto.</p>
+    </div>
+  </section>
 
-<section class="form-section-wrapper">
-<div class="form-container-wrapper">
-  
-  <form 
-    name="contact-consulta" 
-    netlify 
-    netlify-honeypot="bot-field"
-    (submit)="handleSubmit($event)">
+  <section class="form-section-wrapper">
+  <div class="form-container-wrapper">
     
-    <input type="hidden" name="form-name" value="contact-consulta">
-    <p style="display: none;">
-      <label>No llenes esto si eres humano: <input name="bot-field"></label>
-    </p>
-
-    <div class="form-grid-consulta">
+    <form 
+      name="contact-consulta" 
+      netlify 
+      netlify-honeypot="bot-field"
+      (submit)="handleSubmit($event)">
       
-      <div class="form-column-left">
-        <div class="form-group">
-          <label for="nombre-completo">Nombre Completo:</label>
-          <input type="text" id="nombre-completo" name="nombre-completo" required>
+      <input type="hidden" name="form-name" value="contact-consulta">
+      <p style="display: none;">
+        <label>No llenes esto si eres humano: <input name="bot-field"></label>
+      </p>
+
+      <div class="form-grid-consulta">
+        
+        <div class="form-column-left">
+          <div class="form-group">
+            <label for="nombre-completo">Nombre Completo:</label>
+            <input type="text" id="nombre-completo" name="nombre-completo" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="celular">Número celular:</label>
+            <input type="tel" id="celular" name="celular" required>
+          </div>
+          <div class="form-group">
+            <label for="empresa">Nombre de la empresa:</label>
+            <input type="text" id="empresa" name="empresa">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
+
+        <div class="form-column-right">
+          <div class="form-group">
+            <label for="tema-interes">Tema de interés:</label>
+            <textarea id="tema-interes" name="tema-interes" rows="10"></textarea>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="celular">Número celular:</label>
-          <input type="tel" id="celular" name="celular" required>
-        </div>
-        <div class="form-group">
-          <label for="empresa">Nombre de la empresa:</label>
-          <input type="text" id="empresa" name="empresa">
-        </div>
+
       </div>
 
-      <div class="form-column-right">
-        <div class="form-group">
-          <label for="tema-interes">Tema de interés:</label>
-          <textarea id="tema-interes" name="tema-interes" rows="10"></textarea>
+      <div class="form-footer-consulta">
+        <div class="form-group-check">
+          <input type="checkbox" id="politica" name="politica-datos" required>
+          <label for="politica">
+            He leído y acepto la <a href="/politica-de-manejo-de-datos" target="_blank">Política de manejo de datos</a>
+          </label>
         </div>
+        <button type="submit" class="btn-enviar">
+          Enviar <i class="fas fa-paper-plane"></i>
+        </button>
       </div>
 
-    </div>
-
-    <div class="form-footer-consulta">
-      <div class="form-group-check">
-        <input type="checkbox" id="politica" name="politica-datos" required>
-        <label for="politica">
-          He leído y acepto la <a href="/politica-de-manejo-de-datos" target="_blank">Política de manejo de datos</a>
-        </label>
-      </div>
-      <button type="submit" class="btn-enviar">
-        Enviar <i class="fas fa-paper-plane"></i>
-      </button>
-    </div>
-
-  </form>
-</div>
-</section>
-</section>
+    </form>
+  </div>
+  </section>
