@@ -1,309 +1,163 @@
-/* --- Estilos del Hero --- */
-.hero-section {
-  position: relative;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  text-align: left;
-  overflow: hidden;
-
-  background-image: url('/assets/images/about/HeroContactanos.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-
-.text-container h1 {
-  font-size: 2.5rem; /* Ajusta al tamaño de tu home */
-  font-weight: 700;
-  margin: 0;
-  line-height: 1.2;
-  text-transform: uppercase;
-  color: #1c3268;
-  align-items: center;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: var(--color-white); /* Texto blanco para todo el contenido del hero */
-  max-width: 1200px; /* Limita el ancho total del contenido */
-  margin: 0 auto; /* Centra el hero-content */
-  padding: 0 40px; /* Espaciado lateral */
-  width: 100%; /* Asegura que ocupe todo el ancho disponible */
-}
-
-/* Contenedor específico para el texto y botón a la izquierda */
-.hero-content .text-container {
-  width: 50%; /* Limita el ancho del bloque de texto a la mitad de la pantalla (o menos) */
-  /* Ajusta este valor si quieres que el texto ocupe más o menos espacio lateral */
-}
-
-.hero-content h1 {
-  font-size: 3.8rem; /* Tamaño de fuente grande para el título principal */
-  line-height: 1.1; /* Ajusta la altura de línea */
-  margin-bottom: 15px;
-  text-transform: uppercase; /* MAYÚSCULAS para el título como en el ejemplo */
-  font-weight: 700; /* Negrita */
-}
-
-.hero-content h1 span { /* Estilo para "TRANSFORMAN" */
-  color: var(--color-red-accent); /* Color rojo definido en las variables */
-  display: block; /* Para que "TRANSFORMAN" salte de línea */
-}
-
-.hero-content p {
-  font-size: 1.2rem; /* Tamaño de fuente para el subtítulo/descripción */
-  line-height: 1.6;
-  margin-bottom: 30px; /* Espacio antes del botón */
-  max-width: 80%; /* Si quieres que el párrafo sea un poco más estrecho que el título */
-}
-
-/* Estilos para el botón "Cotiza" */
-.hero-content .btn {
-  display: inline-block;
-  background-color: var(--color-red-accent); /* Rojo como en el ejemplo */
-  color: var(--color-white);
-  padding: 15px 35px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  font-weight: 600; /* Negrita */
-  transition: background-color 0.3s ease;
-  border: none; /* Elimina borde si lo tiene */
-  cursor: pointer;
-}
-
-.hero-content .btn:hover {
-  background-color: darken(var(--color-red-accent), 10%); /* Oscurece el botón al pasar el mouse */
-  /* Si no usas preprocesadores, puedes usar un color fijo como: #cc3333 */
-}
-
-
-/* --- Estilos de la Introducción --- */
-.intro-section {
-  padding: 4rem 5%;
-  background-color: #ffffff; /* Fondo blanco */
-  text-align: center;
-}
-
-.intro-content {
-  max-width: 900px;
-  margin: 0 auto;
-  color: #333;
-}
-
-.intro-content h2 {
-  font-size: 2.5rem;
-  color: #253F83; /* Título en rojo */
-  margin-bottom: 1.5rem;
-}
-
-.intro-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  color: #555;
-}
-
-.intro-content p.privacy-note {
-  font-size: 0.9rem;
-  color: #777;
-  margin-top: 2rem;
-}
-
-/* --- Wrapper del Formulario --- */
 .form-section-wrapper {
-  padding: 2rem 5% 5rem 5%;
-  /* Este es el fondo de puntos de tu imagen */
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1.5" fill="%237c1f0"/></svg>');
-  background-color: #1a2e61;
-  background-size: 100px 100px;
-  background-repeat: repeat;
-  background-position: center;
+ padding: 0 5% 5rem 5%;
+ background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1.5" fill="%237c1f0"/></svg>');
+ background-color: #1d3268;
+ background-size: 100px 100px;
+ background-repeat: repeat;
+ background-position: center;
 }
 
-
-/* --- Contenedor Principal del Formulario --- */
 .form-container-wrapper {
-  max-width: 950px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  padding: 2.5rem 3rem;
-  box-sizing: border-box;
+ max-width: 950px;
+ margin: 0 auto;
+ background-color: #ffffff;
+ border: 1px solid #e0e0e0;
+ border-radius: 8px;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+ padding: 2.5rem 3rem;
+ box-sizing: border-box;
 }
 
-/* --- Grid del Formulario (2 columnas) --- */
 .form-grid-consulta {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem 2rem;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 1.5rem 2rem;
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
 }
 
 label {
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #444;
+ margin-bottom: 0.5rem;
+ font-size: 0.9rem;
+ font-weight: 500;
+ color: #444;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-  width: 100%;
-  padding: 0.8rem 1rem;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: 'Montserrat', sans-serif; /* Asegúrate de tener esta fuente o cámbiala */
-  font-size: 1rem;
-  box-sizing: border-box; /* Clave para que el padding no rompa el layout */
-  transition: border-color 0.2s, box-shadow 0.2s;
+ width: 100%;
+ padding: 0.8rem 1rem;
+ background-color: #f9f9f9;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 1rem;
+ box-sizing: border-box;
+ transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 textarea:focus {
-  outline: none;
-  border-color: #253F83; /* Rojo al enfocar */
-  box-shadow: 0 0 0 2px rgba(192, 10, 10, 0.1);
+ outline: none;
+ border-color: #253F83;
+ box-shadow: 0 0 0 2px rgba(192, 10, 10, 0.1);
 }
 
 textarea {
-  resize: vertical;
-  min-height: 150px;
-  height: 100%; /* Ocupa el espacio vertical */
+ resize: vertical;
+ min-height: 150px;
+ height: 100%;
 }
 
 .form-column-right .form-group {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
 }
 
 .form-column-right .form-group textarea {
-  flex-grow: 1; /* Hace que el textarea crezca */
+ flex-grow: 1;
 }
 
-
-/* --- Footer del Formulario (Checkbox y Botón) --- */
 .form-footer-consulta {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+ margin-top: 2rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 1.5rem;
 }
 
 .form-group-check {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
+ display: flex;
+ align-items: center;
+ gap: 0.7rem;
 }
 
 .form-group-check label {
-  margin-bottom: 0;
-  font-size: 0.9rem;
+ margin-bottom: 0;
+ font-size: 0.9rem;
 }
 
 .form-group-check label a {
-  color: #253F83; /* Rojo para el enlace */
-  font-weight: 600;
-  text-decoration: none;
+ color: #253F83;
+ font-weight: 600;
+ text-decoration: none;
 }
 .form-group-check label a:hover {
-  text-decoration: underline;
+ text-decoration: underline;
 }
 
 .btn-enviar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.8rem 2.5rem;
-  background-color: #253F83; /* Rojo del botón */
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ gap: 0.5rem;
+ padding: 0.8rem 2.5rem;
+ background-color: #253F83;
+ color: #ffffff;
+ border: none;
+ border-radius: 5px;
+ font-weight: 600;
+ font-size: 1rem;
+ cursor: pointer;
+ transition: background-color 0.3s ease;
 }
 
 .btn-enviar:hover {
-  background-color: #1c3268; /* Rojo más oscuro */
+ background-color: #1c3268;
 }
 
 .btn-enviar:disabled {
-  background-color: #aaa;
-  cursor: not-allowed;
+ background-color: #aaa;
+ cursor: not-allowed;
 }
 
 .form-main-title {
-  padding-top: 0;
-  text-align: center;   
-  color: #ffffff;     
-  font-size: 2.5rem;  
-  font-weight: 700;
-  text-transform: uppercase;
+ padding-top: 0;
+ text-align: center; 
+ color: #ffffff; 
+ font-size: 2.5rem; 
+ font-weight: 700;
+ text-transform: uppercase;
 }
 
-.form-section-wrapper {
-  padding-top: 0;
-  background-color: #1d3268; 
-}
-
-/* --- Responsividad para el formulario --- */
 @media (max-width: 768px) {
-  .form-grid-consulta {
-    grid-template-columns: 1fr; /* Una sola columna en móviles */
-    gap: 1rem;
-  }
-  
-  .form-container-wrapper {
-    padding: 1.5rem;
-  }
+ .form-grid-consulta {
+ grid-template-columns: 1fr;
+ gap: 1rem;
+ }
+ 
+ .form-container-wrapper {
+ padding: 1.5rem;
+ }
 
-  .form-footer-consulta {
-    align-items: stretch; /* Estira el checkbox y botón */
-  }
+ .form-footer-consulta {
+ align-items: stretch;
+ }
 
-  .form-group-check {
-    font-size: 0.85rem;
-  }
+ .form-group-check {
+ font-size: 0.85rem;
+ }
 
-  .btn-enviar {
-    width: 100%; /* Botón al 100% */
-  }
-}
-
-/* --- Responsividad para la página --- */
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-text {
-    padding-right: 0;
-    margin-bottom: 2rem;
-  }
-  .hero-text h2 {
-    font-size: 2.2rem;
-  }
-  .intro-content h2 {
-    font-size: 2rem;
-  }
+ .btn-enviar {
+ width: 100%;
+ }
 }

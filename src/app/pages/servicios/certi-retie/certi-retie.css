@@ -1,149 +1,134 @@
-/* --- Hero Section: Específico para Certificaciones --- */
 .hero-certificaciones {
-
-  background-image: url('/assets/images/servicios/CertificacionRetie.png');
-  background-size: cover;
-  background-position: center;
-  height: 70vh; /* O la misma altura que tu hero principal */
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  color: #fff;
-  padding: 0 5%;
-  box-sizing: border-box;
+ background-image: url('/assets/images/servicios/CertificacionRetie.png');
+ background-size: cover;
+ background-position: center;
+ height: 70vh;
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+ color: #fff;
+ padding: 0 5%;
+ box-sizing: border-box;
 }
 
 .hero-content {
-  max-width: 1200px;
-  width: 100%;
+ max-width: 1200px;
+ width: 100%;
 }
 
 .text-container h1 {
-  font-size: 3.5rem; /* Ajusta al tamaño de tu home */
-  font-weight: 700;
-  margin: 0;
-  line-height: 1.2;
-  text-transform: uppercase;
+ font-size: 3.5rem;
+ font-weight: 700;
+ margin: 0;
+ line-height: 1.2;
+ text-transform: uppercase;
 }
 
 .text-container p {
-  font-size: 1.3rem;
-  margin-top: 1rem;
-  max-width: 600px; /* Limita el ancho del subtítulo */
+ font-size: 1.3rem;
+ margin-top: 1rem;
+ max-width: 600px;
 }
 
-/* --- Secciones de Contenido (Estilo genérico) --- */
 .content-section {
-  padding: 4rem 2rem;
-  text-align: center;
+ padding: 4rem 2rem;
+ text-align: center;
 }
 
 .content-container {
-  max-width: 900px; /* Centra el contenido */
-  margin: 0 auto;
-  color: #333;
+ max-width: 900px;
+ margin: 0 auto;
+ color: #333;
 }
 
 .content-container h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #253F83; /* Color primario de tu marca */
-  margin-bottom: 1rem;
+ font-size: 2.2rem;
+ font-weight: 700;
+ color: #253F83;
+ margin-bottom: 1rem;
 }
 
 .content-container h3 {
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 1.5rem;
-  text-align: center;
+ font-size: 1.8rem;
+ color: #333;
+ margin-bottom: 1.5rem;
+ text-align: center;
 }
 
 .content-container p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #555;
-  margin-bottom: 1rem;
+ font-size: 1.1rem;
+ line-height: 1.7;
+ color: #555;
+ margin-bottom: 1rem;
 }
 
-/* Fondo claro para variar secciones */
 .bg-light-gray {
-  background-color: #f9f9f9;
+ background-color: #f9f9f9;
 }
 
-/* Lista de servicios */
 .service-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 2rem;
-  text-align: left;
-  display: inline-block; /* Centra el bloque de la lista */
+ list-style: none;
+ padding: 0;
+ margin-top: 2rem;
+ text-align: left;
+ display: inline-block;
 }
 
 .service-list li {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 1rem;
-  position: relative;
-  padding-left: 30px; /* Espacio para el ícono */
+ font-size: 1.1rem;
+ color: #444;
+ margin-bottom: 1rem;
+ position: relative;
+ padding-left: 30px;
 }
 
 .service-list li::before {
-  content: '✔'; /* Ícono de check */
-  color: #253F83; /* Color primario */
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: bold;
+ content: '✔';
+ color: #253F83;
+ position: absolute;
+ left: 0;
+ top: 0;
+ font-weight: bold;
 }
 
-/* --- Sección Call to Action (CTA) --- */
 .cta-section {
-  background-color: #253F83; /* Color primario */
-  color: #fff;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-  text-align: center;
+ background-color: #253F83;
+ color: #fff;
+ padding-top: 2rem;
+ padding-bottom: 1rem;
+ text-align: center;
 }
 
 .cta-section p {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin: 0 0 1.5rem 0;
+ font-size: 1.5rem;
+ font-weight: 500;
+ margin: 0 0 1.5rem 0;
 }
 
-
-.cta-button {
-  display: inline-block;
-  background-color: #fff;
-  color: #253F83;
-  padding: 0.8rem 2rem;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.cta-button:hover {
-  background-color: #f0f0f0;
-  color: #253F83;
-}
-
-/* --- Responsividad (Básica) --- */
 @media (max-width: 768px) {
-  .hero-certificaciones {
-    height: 50vh; /* Menos altura en móviles */
-    text-align: center;
-    justify-content: center;
-  }
-  
-  .text-container h1 {
-    font-size: 2.5rem;
-  }
+ .hero-certificaciones {
+ height: 50vh;
+ text-align: center;
+ justify-content: center;
+ }
+ 
+ .text-container h1 {
+ font-size: 2.5rem;
+ }
 
-  .text-container p {
-    font-size: 1.1rem;
-  }
+ .text-container p {
+ font-size: 1.1rem;
+ }
+ 
+ .content-container h2 {
+ font-size: 2rem;
+ }
+ 
+ .content-container h3 {
+ font-size: 1.6rem;
+ }
+ 
+ .cta-section p {
+ font-size: 1.2rem;
+ }
 }

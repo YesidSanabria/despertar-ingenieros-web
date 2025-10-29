@@ -1,322 +1,241 @@
-.site-footer {
-  background-color: #2e3333;
-  color: #c7c7c7;
-  padding: 3rem 0 1.5rem 0;
-  font-size: 0.9rem;
-}
-
-.footer-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #4a4a4a;
-  gap: 2rem;
-}
-
-.footer-logo img {
-  height: 50px;
-}
-
-.footer-logo .tagline {
-  margin: 0.5rem 0 0 0;
-  font-size: 0.8rem;
-}
-
-.footer-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2.5rem;
-}
-
-.footer-nav a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.footer-nav a:hover {
-  color: var(--color-accent);
-}
-
-/* --- Barra Inferior --- */
-.footer-bottom {
-  text-align: center;
-  padding-top: 1.5rem;
-}
-
-.footer-bottom .separator {
-  margin: 0 1rem;
-}
 .link{
-  color : #ffffff;
+ color : #ffffff;
 }
-
-/* --- Estilos para el Sub-Footer --- */
 
 .sub-footer {
-  background-color: #162753; /* Un gris un poco más oscuro para diferenciar */
-  padding: 1rem 2rem;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #a0a0a0;
+ background-color: #162753;
+ padding: 1rem 2rem;
+ text-align: center;
+ font-size: 0.8rem;
+ color: #a0a0a0;
 }
 
 .sub-footer p {
-  margin: 0;
+ margin: 0;
 }
 
 .sub-footer a {
-  color: #ffffff; /* Texto en blanco para que resalte */
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
+ color: #ffffff;
+ text-decoration: none;
+ font-weight: 600;
+ transition: color 0.3s;
 }
 
 .sub-footer a:hover {
-  color: var(--color-accent); /* Color de acento al pasar el mouse */
+ color: var(--color-accent);
 }
 
-
-/* --- Reset Básico y Fuente Global --- */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Color de fondo de página de ejemplo */
+ margin: 0;
+ font-family: Arial, sans-serif;
+ background-color: #f4f4f4;
 }
 
 a {
-    text-decoration: none;
-    color: #ffffff;
-    transition: text-decoration 0.2s;
+ text-decoration: none;
+ color: #ffffff;
+ transition: text-decoration 0.2s;
 }
 
 a:hover {
-    text-decoration: underline;
+ text-decoration: underline;
 }
 
-/* --- Estructura Principal del Footer --- */
 .main-footer {
-    width: 100%;
-    color: #ffffff;
-    line-height: 1.6;
+ width: 100%;
+ color: #ffffff;
+ line-height: 1.6;
 }
 
-/* --- Parte Superior (Roja) --- */
 .footer-top {
-    background-color: #253F83; /* Tono rojo oscuro exacto de la imagen */
-    padding: 60px 0;
+ background-color: #253F83;
+ padding: 60px 0;
 }
 
 .footer-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Para responsividad en móviles */
+ width: 90%;
+ max-width: 1200px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
 }
 
 .footer-col {
-    padding: 0 15px;
-    box-sizing: border-box;
+ padding: 0 15px;
+ box-sizing: border-box;
 }
 
-/* --- Columna 1: Logo y Redes --- */
 .footer-about {
-    flex: 2; /* Le da más espacio a esta columna */
-    min-width: 300px;
-    margin-bottom: 30px;
+ flex: 2;
+ min-width: 300px;
+ margin-bottom: 30px;
 }
 
 .footer-about .logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
+ display: flex;
+ align-items: center;
+ margin-bottom: 5px;
 }
 
 .footer-about .logo-icon-placeholder {
-    /* Este es un placeholder para el ícono del logo de RedNeet */
-    /* Lo simulamos con un círculo, puedes cambiarlo por tu <img> */
-    width: 40px;
-    height: 40px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 10px;
+ width: 40px;
+ height: 40px;
+ background-size: contain;
+ background-repeat: no-repeat;
+ margin-right: 10px;
 }
 
 .img {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
+ width: 80px;
+ height: 80px;
+ margin-right: 10px;
 }
 
 .footer-about .logo-text {
-    font-size: 28px;
-    font-weight: bold;
+ font-size: 28px;
+ font-weight: bold;
 }
 
 .footer-about .logo-tagline {
-    font-size: 14px;
-    display: block;
-    margin-bottom: 20px;
+ font-size: 14px;
+ display: block;
+ margin-bottom: 20px;
 }
 
 .footer-description {
-    font-size: 15px;
-    max-width: 400px; /* Limita el ancho del texto */
+ font-size: 15px;
+ max-width: 400px;
 }
 
 .social-icons a {
-    display: inline-flex; /* Permite centrar el ícono perfectamente */
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    background-color: #ffffff;
-    color: #253F83; /* Color del ícono rojo */
-    border-radius: 50%;
-    margin-right: 10px;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ width: 36px;
+ height: 36px;
+ background-color: #ffffff;
+ color: #253F83;
+ border-radius: 50%;
+ margin-right: 10px;
+ text-decoration: none;
+ transition: background-color 0.3s, color 0.3s;
 }
 
 .social-icons a:hover {
-    background-color: #e0e0e0; /* Un gris claro al pasar el ratón */
-    color: #253F83;
+ background-color: #e0e0e0;
+ color: #253F83;
 }
 
-/* --- Columna 2: Links --- */
 .footer-links {
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 30px;
+ flex: 1;
+ min-width: 200px;
+ margin-bottom: 30px;
 }
 
 .footer-col h4 {
-    font-size: 18px;
-    margin-top: 0;
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
+ font-size: 18px;
+ margin-top: 0;
+ margin-bottom: 25px;
+ display: flex;
+ align-items: center;
 }
 
 .title-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border: 2px solid #ffffff;
-    border-radius: 50%;
-    margin-right: 12px;
-    font-size: 14px; /* Tamaño del ícono de Font Awesome */
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ width: 32px;
+ height: 32px;
+ border: 2px solid #ffffff;
+ border-radius: 50%;
+ margin-right: 12px;
+ font-size: 14px;
 }
 
 .footer-links ul {
-    list-style: disc; /* Pone los puntos de la lista */
-    padding-left: 25px;
-    margin: 0;
+ list-style: disc;
+ padding-left: 25px;
+ margin: 0;
 }
 
 .footer-links li {
-    margin-bottom: 12px;
-    font-size: 15px;
+ margin-bottom: 12px;
+ font-size: 15px;
 }
 
-/* --- Columna 3: Contacto --- */
 .footer-contact {
-    flex: 1.5; /* Le da un poco más de espacio */
-    min-width: 250px;
-    margin-bottom: 30px;
+ flex: 1.5;
+ min-width: 250px;
+ margin-bottom: 30px;
 }
 
 .footer-contact p {
-    margin: 0 0 10px 0;
-    font-size: 15px;
+ margin: 0 0 10px 0;
+ font-size: 15px;
 }
 
 .footer-contact strong {
-    font-weight: bold;
+ font-weight: bold;
 }
 
 .footer-contact a {
-    text-decoration: underline; /* Emails subrayados como en la imagen */
+ text-decoration: underline;
 }
 .footer-contact a:hover {
-    text-decoration: none;
+ text-decoration: none;
 }
 
-
-/* --- Parte Inferior (Gris) --- */
 .footer-bottom {
-    background-color: #222222; /* Gris oscuro exacto */
-    text-align: center;
-    padding: 20px 0;
-    color: #aaaaaa; /* Color del texto de copyright */
-    font-size: 14px;
+ background-color: #222222;
+ text-align: center;
+ padding: 20px 0;
+ color: #aaaaaa;
+ font-size: 14px;
 }
 
 .footer-bottom p {
-    margin: 0;
+ margin: 0;
 }
 
-/* --- Responsividad para Móviles --- */
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column; /* Apila las columnas */
-        align-items: center; /* Centra las columnas apiladas */
-        text-align: center;
-    }
+ .footer-container {
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+ }
 
-    .footer-col {
-        min-width: 100%;
-        margin-bottom: 40px;
-        padding: 0 10px;
-    }
+ .footer-col {
+ min-width: 100%;
+ margin-bottom: 40px;
+ padding: 0 10px;
+ }
+ .footer-col:last-child {
+ margin-bottom: 0;
+ }
 
-    .footer-description {
-        max-width: 100%;
-    }
+ .footer-description {
+ max-width: 100%;
+ }
 
-    .social-icons {
-        justify-content: center;
-    }
+ .social-icons {
+ justify-content: center;
+ }
 
-    .footer-col h4 {
-        justify-content: center;
-    }
+ .footer-col h4 {
+ justify-content: center;
+ }
 
-    .footer-links ul {
-        display: inline-block;
-        text-align: left; /* Mantiene el texto de la lista alineado a la izq. */
-    }
+ .footer-links ul {
+ display: inline-block;
+ text-align: left;
+ }
 
-    .footer-contact p {
-        text-align: center;
-    }
-}
-
-/* --- Estilos para pantallas pequeñas (móviles) --- */
-@media (max-width: 850px) {
-  .footer-main {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-nav ul {
-    justify-content: center;
-    gap: 1rem 1.5rem;
-    margin-top: 1.5rem;
-  }
-
-  .footer-bottom p {
-    font-size: 0.8rem;
-  }
+ .footer-contact p {
+ text-align: center;
+ }
+ .sub-footer p {
+ font-size: 0.75rem;
+ line-height: 1.5;
+ }
 }
