@@ -10,20 +10,12 @@ import { CommonModule } from '@angular/common';
 })
 
 export class ContactFormComponent {
-
-  // --- YA NO NECESITAMOS LA VALIDACIÓN DE ARCHIVOS ---
-  // fileError: string | null = null;
-  // readonly allowedFileTypes = [ ... ];
-  // onFileChange(event: any): void { ... }
-
-  //Envio del formulario
+  
   handleSubmit(event: Event): void {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
     const formData = new FormData(form);
     const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
-
-    // --- Ya no necesitamos la validación de this.fileError ---
 
     submitButton.disabled = true;
     submitButton.textContent = 'Enviando...';
