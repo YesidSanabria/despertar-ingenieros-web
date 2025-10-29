@@ -8,9 +8,11 @@ import { CertiRetie } from './pages/servicios/certi-retie/certi-retie';
 import { MantenimientoPrev } from './pages/servicios/mantenimiento-prev/mantenimiento-prev';
 import { MediaTension } from './pages/servicios/media-tension/media-tension';
 import { ObrasCiviles } from './pages/servicios/obras-civiles/obras-civiles';
+import { ContactoFormComponent } from './pages/servicios/contacto/contacto';
 
 export const routes: Routes = [
 
+    {path: 'servicios/contacto', component: ContactoFormComponent},
     {path: 'servicios/redes-de-baja-tension', component: RedesBajaTension},
     {path: 'servicios/redes-de-media-tension', component: MediaTension},
     {path: 'servicios/certificaciones-retie', component: CertiRetie},
@@ -18,7 +20,7 @@ export const routes: Routes = [
     {path: 'servicios/obras-civiles', component: ObrasCiviles},
     {path: 'quienes-somos', component: QuienesSomosComponent },
     {path: 'tratamiento-datos', component: PoliticaTratamientoDatosComponent },
-    {path: 'contacto', component: ContactFormComponent},
+    {path: '#contacto', component: ContactFormComponent},
     
     {path: '', component: HomeComponent },
 
