@@ -9,6 +9,7 @@ import { MantenimientoPrev } from './pages/servicios/mantenimiento-prev/mantenim
 import { MediaTension } from './pages/servicios/media-tension/media-tension';
 import { ObrasCiviles } from './pages/servicios/obras-civiles/obras-civiles';
 import { ContactoFormComponent } from './pages/servicios/contacto/contacto';
+import { Formulario } from './pages/formulario/formulario';
 
 export const routes: Routes = [
 
@@ -21,6 +22,7 @@ export const routes: Routes = [
     {path: 'quienes-somos', component: QuienesSomosComponent },
     {path: 'tratamiento-datos', component: PoliticaTratamientoDatosComponent },
     {path: '#contacto', component: ContactFormComponent},
+    {path: 'formulario', component: Formulario},
     
     {path: '', component: HeroComponent },
 

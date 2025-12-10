@@ -11,6 +11,11 @@
  box-sizing: border-box;
 }
 
+.spanAzul{
+ color: #253F83;
+ font-weight: bold;
+}
+
 .hero-content {
  max-width: 1200px;
  width: 100%;
